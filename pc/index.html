@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pro Specs Html List</title>
+    <style>
+        .p-c1 {
+            color: gold !important;
+            letter-spacing: 2px;
+        }
+
+        .p-c2 {
+            color: greenyellow !important;
+            letter-spacing: 2px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            background: #000;
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        header .control-list {
+            font-size: 0;
+            margin-left: 10px;
+        }
+
+        header .control-list button {
+            margin-left: 5px;
+            font-size: 10px;
+        }
+
+        .main {
+            margin: 60px 10px 10px;
+        }
+
+        .main h2 {
+            font-size: 18px;
+            line-height: 22px;
+            cursor: pointer;
+        }
+
+        .main h2::before {
+            content: '-';
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 16px;
+            height: 16px;
+            line-height: 14px;
+            border-radius: 8px;
+            background-color: #000;
+            color: #fff;
+            margin: 4px 5px 0 0;
+        }
+
+        .main h2.on::before {
+            content: '+';
+        }
+
+        .main h2.on+table {
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            word-break: break-all;
+        }
+
+        tr {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        th,
+        td {
+            padding: 5px 10px;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            font-size: 12px;
+        }
+
+        th {
+            color: #fff;
+            background: #666;
+        }
+
+        th:first-child {
+            border-left: 1px solid #000;
+        }
+
+        th:last-child {
+            border-right: 1px solid #000;
+        }
+
+        colgroup .complete {
+            width: 90px;
+        }
+
+        colgroup .level {
+            width: 12%;
+        }
+
+        .complete {
+            text-align: center;
+        }
+
+        tbody tr:nth-child(2n) {
+            background: #eee;
+        }
+
+        .title {
+            display: table-row !important;
+            cursor: pointer;
+        }
+
+        .title th {
+            text-align: left;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 1px;
+            background: #000;
+            text-decoration: underline;
+            padding: 8px 10px;
+            border-top: 3px solid #888;
+        }
+
+        colgroup+thead .title th {
+            border-top: 0;
+        }
+
+        .title th::before {
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 0;
+            border-bottom: 8px solid #fff;
+            margin: 7px 10px 0 0;
+        }
+
+        .mini tr,
+        .mini+tbody {
+            display: none;
+        }
+
+        .mini .title th::before {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid #fff;
+            border-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <h1>Pro Specs Html List</h1>
+            <div class="control-list">
+                <button class="close">-</button>
+                <button class="open">+</button>
+            </div>
+            <script>
+                document.querySelector('.control-list .close').onclick = function() {
+                    var el = document.querySelectorAll('.title');
+                    var len = el.length;
+                    if (len > 0) {
+                        for (var i = 0; i < len; i++) el[i].parentElement.classList.add('mini');
+                    }
+                };
+
+                document.querySelector('.control-list .open').onclick = function() {
+                    var el = document.querySelectorAll('.mini');
+                    var len = el.length;
+                    if (len > 0) {
+                        for (var i = 0; i < len; i++) el[i].classList.remove('mini');
+                    }
+                };
+            </script>
+        </header>
+        <!-- // header -->
+
+        <div class="main">
+            <!-- table -->
+            <table>
+                <colgroup>
+                    <col class="level" style="width: 20%;">
+                    <col class="level" style="width: 20%;">
+                    <col class="level" style="width: 20%;">
+                    <col class="link">
+                    <col class="complete">
+                    <col class="note">
+                </colgroup>
+
+                <!--  -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">Common <span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Layout</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="guide/layout/layout.html" target="_blank">layout</a></td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>Guide</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="guide/template.html" target="_blank">template</a></td>
+                        <td class="complete"></td>
+                        <td class="note">진행 중</td>
+                    </tr>
+                    <tr>
+                        <td>Plugin</td>
+                        <td colspan="2">
+                            <strong>Select</strong><br>
+                            selectric 사용 <br>
+                            css는 가져오지 않고 css처리함
+                        </td>
+                        <td class="link"><a href="https://selectric.js.org/" target="_blank">selectric url</a></td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>Css</td>
+                        <td colspan="2">
+                            <strong>Css</strong><br>
+                            tailwindcss 사용
+                        </td>
+                        <td class="link"><a href="https://tailwindcss.com/" target="_blank">tailwindcss url</a></td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!--  -->
+
+                <!-- Main -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">Main<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Main</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/main/main.html" target="_blank">main</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- Main -->
+
+                <!-- 상품 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">상품<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Shop Main</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/shop/P_SH1.html" target="_blank">P_SH1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>Product List</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/shop/P_SH1.1.html" target="_blank">P_SH1.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>상품상세</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/shop/P_SH1.1.1.1.html" target="_blank">P_SH1.1.1.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- 상품 -->
+
+                <!-- 매장안내 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">매장안내<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>매장안내</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/store/P_CO9.html" target="_blank">P_CO9</a></td>
+                        <td class="complete">O</td>
+                        <td class="note">퍼블완료. 지도map 프론트 개발 해야함</td>
+                    </tr>                    
+                </tbody>
+                <!-- 매장안내 -->
+
+                <!-- 모바일상품권 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">모바일상품권<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>모바일상품권</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/mobile-gift/P_CO10.html" target="_blank">P_CO10</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                    <tr>
+                        <td>모바일상품권(상세)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/mobile-gift/P_CO10.1.html" target="_blank">P_CO10.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                </tbody>
+                <!-- 모바일상품권 -->
+                <!-- 이슈 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">이슈<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>이슈</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/issue/P_SH1.8.html" target="_blank">P_SH1.8</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                    <tr>
+                        <td>이슈(상세)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/issue/P_SH1.8.1.html" target="_blank">P_SH1.8.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                </tbody>
+                <!-- 이슈 -->
+                <!-- 베스트50 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">베스트50<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>베스트50</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/best50/P_SH1.9.html" target="_blank">P_SH1.9</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                </tbody>
+                <!-- 베스트50 -->
+
+                <!-- EVENT -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">EVENT<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>목록</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/event/P_EV1.1.1.html" target="_blank">P_EV1.1.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>상세</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/event/P_EV1.1.1.1.html" target="_blank">P_EV1.1.1.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- EVENT -->
+
+                <!-- ARCHIVE -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">ARCHIVE<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LOOKBOOK</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/archive/P_PS1.2.html" target="_blank">P_PS1.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note">
+                            영상은 기존에 사용되는 vimeo로 적용 상태 <br>
+                            play 버튼은 적용하지 않음 <br>
+                            lookbook 팝업이 spec out이나 일단 리스트는 a tag 처리 상태
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>NEWS</td>
+                        <td>목록</td>
+                        <td></td>
+                        <td class="link"><a href="html/archive/P_PS1.3.html" target="_blank">P_PS1.3</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상세</td>
+                        <td></td>
+                        <td class="link"><a href="html/archive/P_PS1.3.1.html" target="_blank">P_PS1.3.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>브랜드스토리</td>
+                        <td></td>
+                        <td class="link"><a href="html/archive/PS1.4.html" target="_blank">PS1.4</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- ARCHIVE -->
+
+                <!-- SMART FIT -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">SMART FIT<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>안내페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/smartfit/P_FT1.html" target="_blank">P_FT1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- SMART FIT -->
+
+                <!-- SPONSORSHIP -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">SPONSORSHIP<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>목록</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/sponsorship/P_SPON1.html" target="_blank">P_SPON1</a></td>
+                        <td class="complete"></td>
+                        <td class="note">
+                            구조는 완료상태<br>
+                            적용되는 영상에 따른 화면 적용 필요 및 기능 추가 필요
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>상품구매페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/sponsorship/P_SPON1.1.html" target="_blank">P_SPON1.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- SPONSORSHIP -->
+
+                <!-- 샵 검색결과 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">샵 검색결과<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>샵 검색결과</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/search/P_CO1.html" target="_blank">P_CO1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                </tbody>
+                <!-- 샵 검색결과 -->
+
+
+                 <!-- LOGIN -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">LOGIN<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>로그인</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/login/P_CO2.html" target="_blank">P_CO2</a></td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>로그인</td>
+                        <td>아이디 찾기</td>
+                        <td></td>
+                        <td class="link"><a href="html/login/P_CO2.1.html" target="_blank">P_CO2.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>로그인</td>
+                        <td>아이디 찾기</td>
+                        <td>아이디 찾기 결과페이지</td>
+                        <td class="link"><a href="html/login/P_CO2.1.1.html" target="_blank">P_CO2.1.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>로그인</td>
+                        <td>비밀번호 찾기</td>
+                        <td></td>
+                        <td class="link"><a href="html/login/P_CO2.2.html" target="_blank">P_CO2.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>로그인</td>
+                        <td>비밀번호 찾기</td>
+                        <td>휴대폰 인증</td>
+                        <td class="link"><a href="html/login/P_CO2.2.1.html" target="_blank">P_CO2.2.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>로그인</td>
+                        <td>비밀번호 찾기-휴대폰 인증</td>
+                        <td>비밀번호 재설정 </td>
+                        <td class="link"><a href="html/login/P_CO2.2.2.html" target="_blank">P_CO2.2.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>로그인</td>
+                        <td>비밀번호 찾기-휴대폰 인증</td>
+                        <td>비밀번호 재설정 완료</td>
+                        <td class="link"><a href="html/login/P_CO2.2.3.html" target="_blank">P_CO2.2.3</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- LOGIN -->
+
+                 <!-- 회원가입 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">회원가입<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>회원가입</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/login/P_CO2.3.html" target="_blank">P_CO2.3</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>회원가입</td>
+                        <td>회원가입 상세</td>
+                        <td></td>
+                        <td class="link"><a href="html/login/P_CO2.3.1.html" target="_blank">P_CO2.3.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>회원가입</td>
+                        <td>회원가입 완료</td>
+                        <td></td>
+                        <td class="link"><a href="html/login/P_CO2.3.2.html" target="_blank">P_CO2.3.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- 회원가입 -->
+
+                 <!-- 장바구니 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">장바구니<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>장바구니</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/basket/P_CO5.9.html" target="_blank">P_CO5.9</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                </tbody>
+                <!-- 장바구니 -->
+
+                <!-- 주문결제 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">주문결제<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>주문결제</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/basket/P_CO6.html" target="_blank">P_CO6</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                    <tr>
+                        <td></td>
+                        <td>쿠폰 조회/적용 팝업</td>
+                        <td>적용 가능한 쿠폰</td>
+                        <td class="link"><a href="html/basket/P_CO6-1.html" target="_blank">P_CO6-1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>다운로드 가능한 쿠폰 - 팝업</td>
+                        <td class="link"><a href="html/basket/P_CO6-2.html" target="_blank">P_CO6-2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note">디자인 제공되지 않음</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>배송지관리 - 팝업</td>
+                        <td></td>
+                        <td class="link"><a href="html/basket/P_CO6-3.html" target="_blank">P_CO6-3</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+                <!-- 주문결제 -->
+
+                <!-- 주문완료 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">주문완료<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>주문완료</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/basket/P_CO7.html" target="_blank">P_CO7</a></td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>                    
+                </tbody>
+                <!-- 주문완료 -->
+
+                <!-- MY PAGE -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">MY PAGE<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/mypage/P_CO5.html" target="_blank">P_CO5</a></td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>  
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>주문/배송조회</td>
+                        <td class="link"><a href="html/mypage/P_CO5.1.html" target="_blank">P_CO5.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>주문/배송조회-주문상세정보-01</td>
+                        <td class="link"><a href="html/mypage/P_CO5.1.1.html" target="_blank">P_CO5.1.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>주문/배송조회-주문상세정보-02</td>
+                        <td class="link"><a href="html/mypage/P_CO5.1.1.1.html" target="_blank">P_CO5.1.1.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>교환/반품/취소 신청</td>
+                        <td class="link"><a href="html/mypage/P_CO5.2.html" target="_blank">P_CO5.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr> 
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>교환/반품/취소 신청 - 취소신청</td>
+                        <td class="link"><a href="html/mypage/P_CO5.2.1.html" target="_blank">P_CO5.2.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr> 
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>교환/반품/취소 신청 - 취소신청</td>
+                        <td class="link"><a href="html/mypage/P_CO5.2.2.html" target="_blank">P_CO5.2.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr> 
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>교환/반품/취소 신청 - 반품신청</td>
+                        <td class="link"><a href="html/mypage/P_CO5.2.3.html" target="_blank">P_CO5.2.3</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>  
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>교환/반품/취소 내역</td>
+                        <td class="link"><a href="html/mypage/P_CO5.3.html" target="_blank">P_CO5.3</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                     
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑내역</td>
+                        <td>교환/반품/취소 내역-상세</td>
+                        <td class="link"><a href="html/mypage/P_CO5.3.1.html" target="_blank">P_CO5.3.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>      
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑혜택</td>
+                        <td>쿠폰-사용가능</td>
+                        <td class="link"><a href="html/mypage/P_CO5.4.1.html" target="_blank">P_CO5.4.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>   
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑혜택</td>
+                        <td>쿠폰-사용종료</td>
+                        <td class="link"><a href="html/mypage/P_CO5.4.2.html" target="_blank">P_CO5.4.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>      
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑혜택</td>
+                        <td>포인트</td>
+                        <td class="link"><a href="html/mypage/P_CO5.5.html" target="_blank">P_CO5.5</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>        
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑혜택</td>
+                        <td>LS네트웍스 모바일상품권 조회 - 사용가능 </td>
+                        <td class="link"><a href="html/mypage/P_CO5.6.1.html" target="_blank">P_CO5.6.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>  
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑혜택</td>
+                        <td>LS네트웍스 모바일상품권 조회 - 사용종료</td>
+                        <td class="link"><a href="html/mypage/P_CO5.6.2.html" target="_blank">P_CO5.6.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑리스트</td>
+                        <td>위시리스트</td>
+                        <td class="link"><a href="html/mypage/P_CO5.7.html" target="_blank">P_CO5.7</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑리스트</td>
+                        <td>오늘본상품</td>
+                        <td class="link"><a href="html/mypage/P_CO5.8.html" target="_blank">P_CO5.8</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>    
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑활동</td>
+                        <td>리뷰</td>
+                        <td class="link"><a href="html/mypage/P_CO5.10.1.html" target="_blank">P_CO5.101</a></td>
+                        <td class="complete">O</td>
+                        <td class="note">기획서 기준 코딩 완료. Crema review 적용관련 코딩범위 확정 요청 </td>
+                    </tr>                
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑활동</td>
+                        <td>1:1문의</td>
+                        <td class="link"><a href="html/mypage/P_CO5.11.html" target="_blank">P_CO5.11</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>          
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑활동</td>
+                        <td>1:1문의 - 결과</td>
+                        <td class="link"><a href="html/mypage/P_CO5.11.1.html" target="_blank">P_CO5.11.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>          
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>쇼핑활동</td>
+                        <td>1:1문의 - 입력</td>
+                        <td class="link"><a href="html/mypage/P_CO5.11.2.html" target="_blank">P_CO5.11.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>          
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>회원정보</td>
+                        <td>회원정보수정</td>
+                        <td class="link"><a href="html/mypage/P_CO5.12.1.html" target="_blank">P_CO5.12.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>          
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>회원정보</td>
+                        <td>회원정보수정 - 입력</td>
+                        <td class="link"><a href="html/mypage/P_CO5.12.2.html" target="_blank">P_CO5.12.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>          
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>회원정보</td>
+                        <td>배송지 관리</td>
+                        <td class="link"><a href="html/mypage/P_CO5.13.html" target="_blank">P_CO5.13</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>    
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>회원정보</td>
+                        <td>환불계좌관리</td>
+                        <td class="link"><a href="html/mypage/P_CO5.14.html" target="_blank">P_CO5.14</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>         
+                    <tr>
+                        <td>MY PAGE</td>
+                        <td>회원정보</td>
+                        <td>회원탈퇴</td>
+                        <td class="link"><a href="html/mypage/P_CO5.15.html" target="_blank">P_CO5.15</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>         
+                </tbody>
+                <!-- MY PAGE -->
+
+                <!-- 고객센터 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">고객센터<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>고객센터</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/service-center/P_CO11.html" target="_blank">P_CO11</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                    <tr>
+                        <td>고객센터</td>
+                        <td>FAQ</td>
+                        <td></td>
+                        <td class="link"><a href="html/service-center/P_CO11.1.html" target="_blank">P_CO11.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                    <tr>
+                        <td>고객센터</td>
+                        <td>회원혜택</td>
+                        <td></td>
+                        <td class="link"><a href="html/service-center/P_CO11.2.html" target="_blank">P_CO11.2</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                    <tr>
+                        <td>고객센터</td>
+                        <td>단체주문</td>
+                        <td></td>
+                        <td class="link"><a href="html/service-center/P_CO11.3.html" target="_blank">P_CO11.3</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                    
+                    <tr>
+                        <td>고객센터</td>
+                        <td>A/S안내</td>
+                        <td></td>
+                        <td class="link"><a href="html/service-center/P_CO11.4.html" target="_blank">P_CO11.4</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>     
+                    <tr>
+                        <td>고객센터</td>
+                        <td>공지사항</td>
+                        <td></td>
+                        <td class="link"><a href="html/service-center/P_CO11.5.html" target="_blank">P_CO11.5</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                
+                    <tr>
+                        <td>고객센터</td>
+                        <td>공지사항-상세</td>
+                        <td></td>
+                        <td class="link"><a href="html/service-center/P_CO11.5.1.html" target="_blank">P_CO11.5.1</a></td>
+                        <td class="complete">O</td>
+                        <td class="note"></td>
+                    </tr>                
+                </tbody>
+                <!-- 고객센터 -->
+
+                <!-- APP 다운로드 안내 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">APP 다운로드 안내<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>APP 다운로드 안내</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/app/P_CO11.html" target="_blank">P_CO11</a></td>
+                        <td class="complete"></td>
+                        <td class="note">다운로드 버튼 이미지 병합 및 번짐 효과 있음. 이미지 교체 후 확인</td>
+                    </tr>                    
+                </tbody>
+                <!-- APP 다운로드 안내 -->
+
+                <!-- 이용약관 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6">이용약관<span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>이용약관</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="html/terms/P_CO12.html" target="_blank">P_CO12</a></td>
+                        <td class="complete">O</td>
+                        <td class="note">기본 틀 코딩 완료. 개발 적용 후 확인</td>
+                    </tr>                    
+                </tbody>
+                <!-- 이용약관 -->
+
+                <!--  -->
+                <!-- <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="6"><span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="" target="_blank"></a></td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody> -->
+                <!--  -->
+
+            </table>
+            <!-- // table -->
+        </div>
+
+    </div>
+</body>
+
+</html>

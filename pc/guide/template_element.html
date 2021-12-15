@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<title>공통 템플릿</title>
+
+  <link href="guide.css" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../assets/css/ps_style_pc.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/jquery-ui.min.css">
+	<script src="../js/ps_script_pc.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+
+	<script>
+		(function($){
+			$(function(){
+				let gBox = `<div class="guideBox">
+					<pre class="brush: html;">
+					</pre>
+				</div>
+				`;
+
+				const $guideElement = $('.guideElement');
+				$guideElement.each(function(){
+					$(this).after(gBox);
+					const $element = $(this).html();
+					$(this).next().children('pre').html($element);
+				});
+
+			});
+		})(jQuery);
+	</script>	
+
+	<script type="text/javascript" src="code/scripts/shCore.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+
+	<!-- 구현 페이지 js -->
+	<script src="../js/libs/jquery.selectric.min.js"></script>
+	<!-- 구현 페이지 js -->
+
+</head>
+<body>
+    <div class="maping">
+		<a href="template.html">Component</a>
+		<a href="template_element.html">Element</a>
+		<a href="template_layout.html">Layout</a>
+	</div>
+	<h1 class="guideTitleh1">Element</h1>
+
+  <h2 class="guideTitleh2">Tab - type1</h2>
+	<div class="guideElement">
+		<div class="ps-tab--wrap type1">
+			<a href="#" class="ps-tab--item active">전체</a>
+			<a href="#" class="ps-tab--item">이벤트</a>
+			<a href="#" class="ps-tab--item">기획전</a>
+		  </div>
+	</div>
+
+  <h2 class="guideTitleh2">Tab - type2</h2>
+	<div class="guideElement">
+		<div class="ps-tab--wrap type2">
+			<a href="#" class="ps-tab--item active">회원</a>
+			<a href="#" class="ps-tab--item">배송</a>
+			<a href="#" class="ps-tab--item">주문/결제</a>
+			<a href="#" class="ps-tab--item">교환/반품/배송</a>
+			<a href="#" class="ps-tab--item">쿠폰/포인트</a>
+			<a href="#" class="ps-tab--item">상품</a>
+		 </div>
+	</div>
+
+  <h2 class="guideTitleh2">Tab - type3</h2>
+	<div class="guideElement">
+		<div class="ps-inner--small">
+			<div class="ps-tab--wrap type3">
+				<a href="#" class="ps-tab--item active">약관 탭</a>
+				<a href="#" class="ps-tab--item">약관 탭</a>
+				<a href="#" class="ps-tab--item">약관 탭</a>
+				<a href="#" class="ps-tab--item">약관 탭</a>
+				<a href="#" class="ps-tab--item">약관 탭</a>
+			</div>
+			</div>
+	</div>
+
+	<h2 class="guideTitleh2">Table - type1</h2>
+	<div class="guideElement">
+		<div class="ps-table type1">
+			<table>
+				<colgroup>
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+					<col style="width: auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row" rowspan="2">헤드</th>
+						<td>내용</td>
+						<td class="text-center">가운데 정렬</td>
+						<td class="text-right">우측 정렬</td>
+					</tr>
+					<tr>
+						<td colspan="2">내용</td>
+						<td rowspan="2">내용</td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">헤드</th>
+						<td class="text-center">가운데 정렬</td>
+						<td class="text-right">우측 정렬</td>
+					</tr>
+					<tr>
+						<td rowspan="2">내용</td>
+						<td colspan="2">내용</td>
+					</tr>
+					<tr>
+						<th scope="row">헤드</th>
+						<td class="text-center">가운데 정렬</td>
+						<td class="text-right">우측 정렬</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Table - type2 - 디자인 협의 필요</h2>
+	<div class="mb-5">
+		<p>헤더영역의 높이가 디자인별로 다름 [ 50px / 60px ] 기준은 50px로 설정 상태</p>
+		<p>tbody td 의 상하 여백이 디자인별로 다름 [ 20px / 24px / 27px / 30px ] 기준은 24로 설정 상태</p>
+	</div>
+	<div class="guideElement">
+		<div class="ps-table type2">
+			<table>
+				<colgroup>
+					<col style="width: 220px;">
+					<col style="width: auto">
+					<col style="width: 220px;">
+					<col style="width: auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">헤더</th>
+						<th scope="col">헤더</th>
+						<th scope="col">헤더</th>
+						<th scope="col">헤더</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">헤더</th>
+						<td>내용</td>
+						<th scope="row">헤더</th>
+						<td>
+							<div class="flex items-center justify-between">
+								내용
+								<a href="javascript:void(0)" class="ps-btn type4">상세조회</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="essential">헤더</th>
+						<td colspan="3">
+							<div class="ps-input">
+								<input type="text" class="inp">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="top">헤더</th>
+						<td colspan="3">
+							<textarea name="" id="" cols="30" rows="10" class="ps-textarea" placeholder="구매를 원하시는 상품코드를 콤마(,)로&#13;&#10;구분하여 입력해주세요."></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="top essential">헤더</th>
+						<td colspan="3">
+							<textarea name="" id="" cols="30" rows="10" class="ps-textarea" placeholder="구매를 원하시는 상품코드를 콤마(,)로&#13;&#10;구분하여 입력해주세요."></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="top big">Font Size 18px</th>
+						<td colspan="3">
+							<ul class="ps-list type1">
+								<li>문구</li>
+								<li>문구</li>
+								<li>문구</li>
+								<li>문구</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="top vt big">TH 최상단</th>
+						<td colspan="3">
+							<ul class="ps-list type1">
+								<li>문구</li>
+								<li>문구</li>
+								<li>문구</li>
+								<li>문구</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Table - type3</h2>
+	<div class="guideElement">
+		<div class="ps-table type3">
+			<table>
+				<colgroup>
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+					<col style="width: auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-center">내용</td>
+						<td class="text-center">내용</td>
+						<td class="text-center">내용</td>
+						<td class="text-center">내용</td>
+					</tr>
+					<tr>
+						<td class="text-center">내용</td>
+						<td class="text-center">내용</td>
+						<td class="text-center">내용</td>
+						<td class="text-center">내용</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Table - type4</h2>
+	<div class="guideElement">
+		<div class="ps-table type4">
+			<table>
+				<colgroup>
+					<col style="width: 200px;">
+					<col style="width: auto">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">헤더</th>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<th scope="row">헤더</th>
+						<td>내용</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">안내문구 - 디자인별 간격 다름</h2>
+	<div class="guideElement" style="padding-right: 500px;">
+		<dl class="ps-i-cont">
+			<dt>안내사항</dt>
+			<dd>
+				<ul class="ps-list type1">
+					<li>개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 고객에게 고지하고 동의를 받도록 하겠습니다.</li>
+					<li>개인정보의 처리를 위탁하는 경우에는 위탁계약 등을 통하여 서비스제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관하겠습니다.</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+
+	<h2 class="guideTitleh2">안내문구 - white</h2>
+	<div class="guideElement" style="padding-right: 500px; background: #222;">
+		<dl class="ps-i-cont white">
+			<dt>안내사항</dt>
+			<dd>
+				<ul class="ps-list type1 white">
+					<li>개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 고객에게 고지하고 동의를 받도록 하겠습니다.</li>
+					<li>개인정보의 처리를 위탁하는 경우에는 위탁계약 등을 통하여 서비스제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관하겠습니다.</li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+
+	<h2 class="guideTitleh2">List - type1</h2>
+	<div class="guideElement" style="padding-right: 500px;">
+		<ul class="ps-list type1">
+			<li>개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 고객에게 고지하고 동의를 받도록 하겠습니다.</li>
+			<li>개인정보의 처리를 위탁하는 경우에는 위탁계약 등을 통하여 서비스제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관하겠습니다.</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type1 - small</h2>
+	<div class="guideElement" style="padding-right: 500px;">
+		<ul class="ps-list small type1">
+			<li>개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 고객에게 고지하고 동의를 받도록 하겠습니다.</li>
+			<li>개인정보의 처리를 위탁하는 경우에는 위탁계약 등을 통하여 서비스제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관하겠습니다.</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type1 - c-gray</h2>
+	<div class="guideElement" style="padding-right: 500px;">
+		<ul class="ps-list c-gary type1">
+			<li>개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 고객에게 고지하고 동의를 받도록 하겠습니다.</li>
+			<li>개인정보의 처리를 위탁하는 경우에는 위탁계약 등을 통하여 서비스제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관하겠습니다.</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type1 - white</h2>
+	<div class="guideElement" style="padding-right: 500px; background: #222;">
+		<ul class="ps-list type1 white">
+			<li>개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 고객에게 고지하고 동의를 받도록 하겠습니다.</li>
+			<li>개인정보의 처리를 위탁하는 경우에는 위탁계약 등을 통하여 서비스제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관하겠습니다.</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type1 - normal</h2>
+	<div class="guideElement" style="padding-right: 500px;">
+		<ul class="ps-list type1 normal">
+			<li>개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 고객에게 고지하고 동의를 받도록 하겠습니다.</li>
+			<li>개인정보의 처리를 위탁하는 경우에는 위탁계약 등을 통하여 서비스제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관하겠습니다.</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type2</h2>
+	<div class="guideElement" style="padding-right: 500px;">
+		<ul class="ps-list type2">
+			<li>개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 고객에게 고지하고 동의를 받도록 하겠습니다.</li>
+			<li>개인정보의 처리를 위탁하는 경우에는 위탁계약 등을 통하여 서비스제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관하겠습니다.</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type3</h2>
+	<div class="guideElement" style="padding-right: 500px;">
+		<ul class="ps-list type3">
+			<li>
+				<a href="#">프로스펙스 2021 F/W 퍼포먼스 라인</a>
+			</li>
+			<li>
+				<a href="#">신학기 이벤트! 9월 포토상품평 이벤트 최대 3천포인트 제공</a>
+			</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">List - type4</h2>
+	<div class="guideElement" style="width: 500px;">
+		<ul class="ps-list type4">
+			<li>
+				<span class="f-word">상품 쿠폰</span>
+				<div class="cont">
+					<p class="font-medium">- 7,900원</p>
+				</div>
+			</li>
+			<li>
+				<span class="f-word">즉시할인 포인트</span>
+				<div class="cont">
+					<p class="font-medium">- 2,100원</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<h2 class="guideTitleh2">Slide</h2>
+	<div class="guideElement">
+		<div class="ps-slide">
+			<div class="ps-slide-item">
+				<a href="javascript:void(0)" class="title font-bold">최대 혜택가</a>
+				<div class="ps-slide-content">
+					내용 <br>
+					내용 <br>
+					내용
+				</div>
+			</div>
+			<div class="ps-slide-item">
+				<a href="javascript:void(0)" class="title font-bold">카드사 혜택</a>
+				<div class="ps-slide-content">
+					<div class="bd-box">
+						내용 <br>
+						내용 <br>
+						내용
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Slide BIG</h2>
+	<div class="guideElement">
+		<div class="ps-slide big">
+			<div class="ps-slide-item">
+				<a href="javascript:void(0)" class="title font-bold qa">
+					<span class="font-eng font-bold q">Q</span> [취소, 교환, 반품관련] 교환/반품 기준 및 절차는 어떻게 되나요?
+				</a>
+				<div class="ps-slide-content">
+					<div class="inner answer">
+						<span class="font-eng font-bold a">A</span>
+						<div class="cont">
+							내용 <br>
+							내용 <br>
+							내용 <br>
+							내용 <br>
+							내용 <br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ps-slide-item">
+				<a href="javascript:void(0)" class="title font-bold">카드사 혜택</a>
+				<div class="ps-slide-content">
+					<div class="inner">
+						내용 <br>
+						내용 <br>
+						내용
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2"></h2>
+	<div class="guideElement">
+		
+	</div>
+	
+
+</body>
+</html>

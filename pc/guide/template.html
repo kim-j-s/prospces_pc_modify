@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<title>공통 템플릿</title>
+
+  <link href="guide.css" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../assets/css/ps_style_pc.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/jquery-ui.min.css">
+	<script src="../js/ps_script_pc.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+
+	<script>
+		(function($){
+			$(function(){
+				let gBox = `<div class="guideBox">
+					<pre class="brush: html;">
+					</pre>
+				</div>
+				`;
+
+				const $guideElement = $('.guideElement');
+				$guideElement.each(function(){
+					$(this).after(gBox);
+					const $element = $(this).html();
+					$(this).next().children('pre').html($element);
+				});
+
+			});
+		})(jQuery);
+	</script>	
+
+	<script type="text/javascript" src="code/scripts/shCore.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="code/scripts/shBrushXml.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="code/styles/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="code/styles/shThemeDefault.css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+
+	<!-- 구현 페이지 js -->
+	<script src="../js/libs/jquery.selectric.min.js"></script>
+	<!-- 구현 페이지 js -->
+
+</head>
+<body>
+    <div class="maping">
+		<a href="template.html">Component</a>
+		<a href="template_element.html">Element</a>
+		<a href="template_layout.html">Layout</a>
+	</div>
+	<h1 class="guideTitleh1">Component</h1>
+
+	<h2 class="guideTitleh2">Common</h2>
+	<div class="guideElement">
+		<p class="font-eng">font-family: Poppins, sans-serif;</p>		
+		<p class="font-bold">두껍게</p>		
+	</div>
+
+	<h2 class="guideTitleh2">Common - 말줄임</h2>
+	<div class="guideElement" style="width: 300px;">
+		<p class="line-clamp-1">
+			1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임 1줄 말줄임
+		</p>
+	</div>
+	<div class="guideElement" style="width: 300px;">
+		<p class="line-clamp-2">
+			2줄 말줄임 2줄 말줄임 2줄 말줄임 2줄 말줄임 2줄 말줄임 2줄 말줄임 2줄 말줄임 2줄 말줄임 2줄 말줄임 2줄 말줄임
+		</p>
+	</div>
+	<div class="guideElement" style="width: 300px;">
+		<p class="line-clamp-3">
+			3줄 말줄임 3줄 말줄임 3줄 말줄임 3줄 말줄임 3줄 말줄임 3줄 말줄임 3줄 말줄임 3줄 말줄임 3줄 말줄임 3줄 말줄임
+		</p>
+	</div>
+
+	<h2 class="guideTitleh2">Title</h2>
+	<div class="guideElement">
+		<h3 class="ps-subtitle font-eng font-bold">Title</h3>
+		<h3 class="ps-subtitle">타이틀</h3>
+		<h4 class="ps-title-type1 font-bold">타이틀</h4>
+	</div>
+
+	<h2 class="guideTitleh2">Input</h2>
+	<div class="guideElement">
+		<div style="width: 200px;">
+      <div class="ps-input">
+        <input type="text" class="inp">
+      </div>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Input - 60</h2>
+	<div class="guideElement">
+		<div style="width: 200px;">
+      <div class="ps-input big">
+        <input type="text" class="inp">
+      </div>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Textarea</h2>
+	<div class="guideElement">
+    <textarea name="" id="" cols="30" rows="10" class="ps-textarea"></textarea>
+	</div>
+
+	<h2 class="guideTitleh2">Checkbox</h2>
+	<div class="guideElement">
+		<div class="ps-chkbox">
+			<label>
+			  <input type="checkbox" name="" id="">
+			  <span class="text">상품</span>
+			</label>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Radio</h2>
+	<div class="guideElement">
+		<div class="ps-chkbox">
+			<label>
+			  <input type="radio" name="radio" id="">
+			  <span class="text">동의함</span>
+			</label>
+		</div>
+		<div class="ps-chkbox">
+			<label>
+			  <input type="radio" name="radio" id="">
+			  <span class="text">동의안함</span>
+			</label>
+		</div>
+	</div>
+
+  <h2 class="guideTitleh2">Select - Selectric 사용 - 원본 소스는 가이드 문서 소스 확인</h2>
+	<div class="guideElement">
+		<select name="" id="" class="ps-select">
+      <option value="">진행중</option>
+      <option value="">종료</option>
+    </select>
+	</div>
+
+  <h2 class="guideTitleh2">Select - disabled - 스타일 정의 필요 [ 임시 처리 ]</h2>
+	<div class="guideElement">
+		<select name="" id="" class="ps-select" disabled="disable">
+      <option value="">진행중</option>
+      <option value="">종료</option>
+    </select>
+	</div>
+
+	<h2 class="guideTitleh2">Select - 높이44px</h2>
+	<div class="guideElement">
+		<select name="" id="" class="ps-select h-small">
+      <option value="">최근등록순</option>
+			<option value="">인기순</option>
+			<option value="">판매순</option>
+			<option value="">높은가격순</option>
+			<option value="">낮은가격순</option>
+    </select>
+	</div>
+
+	<h2 class="guideTitleh2">Select - 높이 36px</h2>
+	<div class="guideElement">
+		<select name="" id="" class="ps-select h-36">
+      <option value="">최근등록순</option>
+			<option value="">인기순</option>
+			<option value="">판매순</option>
+			<option value="">높은가격순</option>
+			<option value="">낮은가격순</option>
+    </select>
+	</div>
+
+  <h2 class="guideTitleh2">Select - mini - 목록의 상단에 배치된 경우 상하 30px 간격</h2>
+	<div class="guideElement">
+		<select name="" id="" class="ps-select mini">
+      <option value="">최근등록순</option>
+			<option value="">인기순</option>
+			<option value="">판매순</option>
+			<option value="">높은가격순</option>
+			<option value="">낮은가격순</option>
+    </select>
+	</div>
+
+	<h2 class="guideTitleh2">Select - mini - near - 목록과 떨어져 있는 경우</h2>
+	<div class="guideElement">
+		<select name="" id="" class="ps-select mini near">
+      <option value="">최근등록순</option>
+			<option value="">인기순</option>
+			<option value="">판매순</option>
+			<option value="">높은가격순</option>
+			<option value="">낮은가격순</option>
+    </select>
+	</div>
+
+  <h2 class="guideTitleh2">Select - mini 우측정렬</h2>
+	<div class="guideElement flex justify-end">
+		<select name="" id="" class="ps-select mini right">
+      <option value="">최근등록순</option>
+			<option value="">인기순</option>
+			<option value="">판매순</option>
+			<option value="">높은가격순</option>
+			<option value="">낮은가격순</option>
+    </select>
+	</div>	
+
+	<h2 class="guideTitleh2">Button</h2>
+	<div class="guideElement">
+    <div>
+      <a href="javascript:void(0)" class="ps-btn type1">초기화</a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn type1 big">초기화</a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn type2">필터적용</a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn type2 big">필터적용</a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn type3 font-bold">더보기</a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn type4">상세조회</a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn type5"><span>쿠폰받기</span></a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn type6"><span>배송보다 빠른! 매장 재고 확인</span></a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn naver"><span>Pay 구매</span></a>
+    </div>
+    <div class="mt-8">
+      <a href="javascript:void(0)" class="ps-btn icon search gray"><span>검색</span></a>
+    </div>
+	</div>
+
+	<h2 class="guideTitleh2">Button - 더보기 - 260px 공통 사용</h2>
+	<div class="guideElement">
+		<div class="w-full ps-btn-wrap list-more">
+			<a href="javascript:void(0)" class="ps-btn type3 font-bold">더보기</a>
+		</div>
+	</div>
+
+  <h2 class="guideTitleh2">Button - wrap</h2>
+	<div class="guideElement">
+		<div class="ps-btn-wrap">
+      <a href="javascript:void(0)" class="ps-btn type1">초기화</a>
+      <a href="javascript:void(0)" class="ps-btn type2">필터적용</a>
+    </div>
+	</div>
+
+  <h2 class="guideTitleh2">Button - share</h2>
+	<div class="guideElement">
+    <div class="ps-share">
+			<button type="button" class="ps-btn icon share">공유하기</button>
+			<div class="ps-share-box">
+				<div class="ps-share-item">
+					<a href="#" class="ps-btn icon blog">blog</a>
+				</div>
+				<div class="ps-share-item">
+					<a href="#" class="ps-btn icon kakao">카카오톡</a>
+				</div>
+				<div class="ps-share-item">
+					<a href="#" class="ps-btn icon kakaostory">카카오스토리</a>
+				</div>
+				<div class="ps-share-item">
+					<a href="#" class="ps-btn icon facebook">FACEBOOK</a>
+				</div>
+				<div class="ps-share-item">
+					<a href="#" class="ps-btn icon twitter">twitter</a>
+				</div>
+				<div class="ps-share-item">
+					<a href="javascript:void(0)" class="ps-btn ps-btn-clipboard font-eng font-bold">URL</a>
+				</div>
+			</div>
+			<span class="ps-toast-msg">URL이 복사 되었습니다.</span>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Button - wishlist [ hover / on 관련 디자인 없음 ]</h2>
+	<div class="guideElement">
+		<button type="button" class="ps-btn icon wishlist">추천하기</button>
+	</div>
+
+  <h2 class="guideTitleh2">Badge</h2>
+	<div class="guideElement">
+		<div class="ps-badge">
+			<span class="badge type1">진행중</span>
+			<span class="badge type2">종료</span>
+		</div>
+		<br>
+		<div class="ps-badge">
+			<span class="badge type3">NEW</span>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">달력</h2>
+	<div class="guideElement">
+		<div class="ps-input calendar">
+			<input type="text" class="inp datepicker">
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">달력 - 범위</h2>
+	<div class="guideElement">
+		<div class="flex-cont-wrap calendar">
+			<div class="ps-input calendar">
+				<input type="text" class="inp datepicker">
+			</div>
+			<span class="m">~</span>
+			<div class="ps-input calendar">
+				<input type="text" class="inp datepicker">
+			</div>
+		</div>		
+	</div>
+
+	<h2 class="guideTitleh2">Tooltip</h2>
+	<div class="guideElement">
+		<div class="tooltip-box">
+			<button type="button" class="ps-btn icon tooltip"><span>툴팁</span></button>
+			<div class="tooltip-box-cont">
+				<p>
+					이메일 수신에 동의하시면 프로스펙스닷컴의 다양한 혜택 및<br>
+					상품정보, 이벤트 등의 안내를 받아보실 수 있습니다.<br>
+					구매정보와 관련된 내용은 수신동의 여부와 관계없이 발송됩니다.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Tooltip - 문구</h2>
+	<div class="guideElement">
+		<div class="tooltip-box ver-top">
+			<button type="button" class="ps-btn word tooltip"><span>상품코드 확인 방법</span></button>
+			<div class="tooltip-box-cont">
+				<img src="../../assets/images/img_guide01.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2"></h2>
+	<div class="guideElement">
+		
+	</div>
+
+	<h2 class="guideTitleh2"></h2>
+	<div class="guideElement">
+		
+	</div>
+	
+
+</body>
+</html>

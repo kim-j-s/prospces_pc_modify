@@ -1,0 +1,1099 @@
+<!DOCTYPE html class="msie">
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로스펙스 | 주문결제</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ps_style_pc.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/jquery-ui.min.css">
+  <script src="../../js/ps_script_pc.js"></script>
+  <script src="../../js/jquery-ui.min.js"></script>
+  <script src="../../js/libs/jquery.selectric.min.js"></script>
+
+  
+  <meta name="Subject" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall " />
+  <meta name="Title" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall" />
+  <meta name="description" content="프로스펙스 공식 온라인 쇼핑몰, 몽벨 공식 온라인 쇼핑몰,스포츠 라이프 스타일,LSNmall, 스포츠,아웃도어,신발,의류,스포츠 용품,자전거" />
+  <meta name="Keywords" content="프로스펙스 공식 온라인 쇼핑몰,프로스펙스,스포츠라이프스타일,,LSNmall,라이프스타일,쇼핑몰,프로스펙스,몽벨,온라인,쇼핑,온라인쇼핑몰,스포츠쇼핑몰,it's my sports,저마다의 스포츠가 있다,  " />
+  <meta name="Author" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall" />
+  <meta name="Publisher" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall" />
+  <meta name="Other Agent" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall" />
+  <meta name="Classification" content="프로스펙스,몽벨,쇼핑몰,몰,스포츠쇼핑몰,패션쇼핑몰,쇼핑,온라인쇼핑몰,공식쇼핑몰,온라인공식쇼핑몰" />
+  <meta name="Reply-To(Email)" content="info@lsnetwork.com" />
+  <!-- META name="Filename" content="index.html" / -->
+  <meta name="Author-Date(Date)" content="LS NETWORKS,2017" />
+  <meta name="Location" content="대한민국,서울,용산" />
+  <meta name="Distribution" content="프로스펙스 공식 온라인 쇼핑몰" />
+  <meta name="Copyright" content="COPYRIGHT © LS NETWORKS CO. ALL RIGHTS RESERVED." />
+  <meta name="Robots" content="ALL" />
+  <meta name="apple-mobile-web-app-title" content="프로스펙스 공식 온라인 쇼핑몰" />
+
+  <!-- 페이스북, 네이버블로그 -->
+  <meta property="og:title" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall " />
+  <meta property="og:description" content="프로스펙스 공식 온라인 쇼핑몰, 몽벨 공식 온라인 쇼핑몰,스포츠,아웃도어,신발,의류,스포츠 용품,자전거,스포츠라이프스타일" />
+  <meta property="og:url" 	content="http://www.lsnmall.com/display.do?cmd=mallMain" /> 
+  <meta property="og:image" 	content="http://image.lsnmall.com/files/upload/lsnmall_logo_250.jpg"/> 
+  <meta property="og:price" 	content=""/> 
+  <meta property="og:type" 	content="website" />
+  <meta property="og:image:width" content="200"/>
+  <meta property="og:image:height" content="200"/>
+
+  <meta name="keywords" content="프로스펙스 공식 온라인 쇼핑몰, 스포츠 라이프 스타일 LSNmall " />
+  <!-- 트위터 -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall " />
+  <meta name="twitter:description" content="프로스펙스 공식 온라인 쇼핑몰, 몽벨 공식 온라인 쇼핑몰,스포츠,아웃도어,신발,의류,스포츠 용품,자전거,스포츠라이프스타일" />
+  <meta name="twitter:url" content="http://www.lsnmall.com/display.do?cmd=mallMain" />
+<meta name="twitter:image" content="http://image.lsnmall.com/files/upload/lsnmall_logo_250.jpg">
+</head>
+
+<body>
+  <div id="psWrap" class="sub">
+    <!-- Header -->
+<header id="psHeader" class="ps-header ">
+  <div class="ps-header--wrap">
+    <div class="ps-inner flex">
+      <div class="ps-header--logo flex-none">
+        <a href="#">PRO-SPECS</a>
+      </div>
+      <nav class="ps-header--gnb flex-auto flex">
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="Shop">SHOP</a>
+          <div class="gnb__dropdown">
+            <div class="ps-inner flex">
+              <div class="dropdown--nav w-full flex flex-nowrap justify-between">
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="font-eng font-extrabold black">SHOES</a></dt>
+                  <dd><a href="#">러닝화</a></dd>
+                  <dd><a href="#">워킹화</a></dd>
+                  <dd><a href="#">트래킹화</a></dd>
+                  <dd><a href="#">아동화</a></dd>
+                  <dd><a href="#">스니커즈</a></dd>
+                  <dd><a href="#">샌들/슬리퍼</a></dd>
+                  <dd><a href="#">기타</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="font-eng font-extrabold black">MEN</a></dt>
+                  <dd><a href="#">트레이닝</a></dd>
+                  <dd><a href="#">아우터</a></dd>
+                  <dd><a href="#">상의</a></dd>
+                  <dd><a href="#">하의</a></dd>
+                  <dd><a href="#">기타</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="font-eng font-extrabold black">WOMEN</a></dt>
+                  <dd><a href="#">트레이닝</a></dd>
+                  <dd><a href="#">아우터</a></dd>
+                  <dd><a href="#">상의</a></dd>
+                  <dd><a href="#">하의</a></dd>
+                  <dd><a href="#">기타</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="font-eng font-extrabold black">BAG/ACC</a></dt>
+                  <dd><a href="#">크로스/토트백</a></dd>
+                  <dd><a href="#">백팩</a></dd>
+                  <dd><a href="#">모자/양말</a></dd>
+                  <dd><a href="#">기타</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="active font-eng font-extrabold black">ORIGINAL</a></dt>
+                  <dd><a href="#">스니커즈</a></dd>
+                  <dd><a href="#">샌들/슬라이드</a></dd>
+                  <dd><a href="#">아동화</a></dd>
+                  <dd><a href="#">의류</a></dd>
+                  <dd><a href="#">용품</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="accent-bullet font-eng font-extrabold black">SALE</a></dt>
+                  <dd><a href="#">신발</a></dd>
+                  <dd><a href="#">남성</a></dd>
+                  <dd><a href="#">여성</a></dd>
+                  <dd><a href="#">용품</a></dd>
+                </dl>
+              </div>
+              <div class="dropdown--quick-menu flex-none">
+                <ul class="quick-menu flex flex-nowrap font-eng font-extrabold black">
+                  <li><a href="#">BEST 50</a></li>
+                  <li><a href="#">ISSUE</a></li>
+                  <li><a href="#">BEST REVIEW</a></li>
+                </ul>
+                <a href="#" class="quick-menu--banner shop">
+                  <img src="../../assets/images/quick_banner.png" alt="온라인 단독특가">
+                  <div class="desc">
+                    <span class="badge">온라인 단독특가</span>
+                    <h3 class="title font-bold line-clamp-2">영국 디자인하우스와<br /> 콜라보한 트랙 어글리 스니커즈</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="Event">EVENT</a>
+          <div class="gnb__dropdown">
+            <div class="ps-inner">EVENT</div>
+          </div>
+        </div>
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="Archive">ARCHIVE</a>
+          <div class="gnb__dropdown">
+            <div class="ps-inner">
+              <div class="flex justify-between">
+                <ul class="quick-menu l-type flex font-eng font-extrabold black">
+                  <li><a href="#">LOOKBOOK</a></li>
+                  <li><a href="#">NEWS</a></li>
+                  <li><a href="#">BRAND STORY</a></li>
+                </ul>
+                <div class="flex archive-banner">
+                  <a href="#" class="quick-menu--banner">
+                    <img src="../../assets/images/quick_banner_archive_01.png" alt="브랜드 감사제">
+                    <div class="desc">
+                      <span class="badge red">브랜드 감사제</span>
+                      <h3 class="title font-bold white line-clamp-2">꽝없는 경품룰렛, 오리지널라인<br> 추가할인, 포인트 2배 적립 혜택까지</h3>
+                    </div>
+                  </a>
+                  <a href="#" class="quick-menu--banner">
+                    <img src="../../assets/images/quick_banner_archive_02.png" alt="상품 모음전">
+                    <div class="desc">
+                      <span class="badge">상품 모음전</span>
+                      <h3 class="title font-bold line-clamp-2">클래스가 남다른<br> MD 추천 F/W 상품 모음전</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="SponsorShip">SPONSORSHIP</a>
+          <div class="gnb__dropdown">
+            <div class="ps-inner">SPONSORSHIP</div>
+          </div>
+        </div>
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="SmartFit">SMART FIT</a>
+          <div class="gnb__dropdown">
+            <div class="dropdown--bg-wrap smart-fit">
+              <div class="ps-inner flex items-center">
+                <h3 class="title flex-none"><span class="font-eng font-extrabold">SMART FIT</span></h3>
+                <p class="desc font-sans">프로스펙스 스마트핏은 내 발에 완벽한 사이즈와 상품을 추천해 주고, 맞춤신발 제작까지 해 주는 SMART한 서비스입니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="ps-header--util flex-none flex items-center font-eng font-extrabold">
+        <button class="ps-btn ps-icon--search">검색</button>
+        <button class="ps-btn ps-icon--cart">쇼핑백</button>
+        <a href="#" class="h-6 leading-6">LOGIN</a>
+      </div>
+    </div>
+  </div>
+  <div class="ps-header--search w-full">
+    <div class="ps-search--wrap mx-auto">
+      <div class="ps-search--header flex">
+        <div class="ps-input-wrap flex-auto flex items-center">
+          <input type="text" name="" id="" placeholder="프로스펙스 21FW 시즌 오리지널 라인">
+        </div>
+        <button type="button" class="ps-btn search flex-none font-bold">검색</button>
+      </div>
+      <div class="ps-search--body">
+        <h3 class="font-bold">추천 검색어</h3>
+        <div class="flex">
+          <ul class="ps-search-recommend flex-auto">
+            <li><a href="#" class="line-clamp-1">21FW 퍼포먼스</a></li>
+            <li><a href="#" class="line-clamp-1">가을자켓</a></li>
+            <li><a href="#" class="line-clamp-1">후드티</a></li>
+            <li><a href="#" class="line-clamp-1">워킹화</a></li>
+            <li><a href="#" class="line-clamp-1">덴스 오리지널 콜라보레이션</a></li>
+          </ul>
+          <div class="ps-search-banner flex-none">
+            <a href="#">
+              <img src="../../assets/images/banner_search.png" alt="프로스펙스 x 굿네이션">
+              <p class="font-medium line-clamp-1">프로스펙스 x 굿네이션</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--// Header -->
+    <!-- Main -->
+    <main>
+      <div class="ps-inner po-rela">
+        <div class="ps-breadcrumb">
+          <span>장바구니</span>
+          <span>주문결제</span>              
+        </div>
+        <h3 class="ps-subtitle font-eng font-bold">주문결제</h3>
+        <div class="order-layout po-rela">
+          <div class="order-layout--l">
+            <div class="ps-cont-head">
+              <h4 class="font-bold self-end">주문정보</h4>
+              <div class="ps-cont-head--side self-end">
+                <small class="small-desc">물류와 매장에서 택배배송</small>
+              </div>
+            </div>
+            <div class="ps-table type2 order">
+              <table>
+                <colgroup>
+                  <col style="width: auto">
+                  <col style="width: 15%;">
+                  <col style="width: 15%;">
+                  <col style="width: 15%;">
+                  <col style="width: 15%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">상품/옵션 정보</th>
+                    <th scope="col">TAG가</th>
+                    <th scope="col">판매금액</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">배송비</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/pro-01.png" alt="상품더미">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-center">79,000원</td>
+                    <td class="text-center font-bold">79,000원</td>
+                    <td class="text-center">1</td>
+                    <td class="text-center" rowspan="2">무료배송</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/pro-01.png" alt="상품더미">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-center">79,000원</td>
+                    <td class="text-center font-bold">79,000원</td>
+                    <td class="text-center">1</td>                
+                  </tr>
+                </tbody>
+              </table>
+            </div>  
+
+            <div class="ps-cont-head">
+              <h4 class="font-bold self-end">주문자정보</h4>
+            </div>
+            <div class="ps-table type2 order">
+              <table>
+                <colgroup>
+                  <col style="width: 15%;">
+                  <col style="width: auto">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th class="text-left">이름</th>
+                    <td class="text-left">김프로</td>
+                  </tr>
+                  <tr>
+                    <th class="text-left">휴대폰 번호</th>
+                    <td class="text-left">010 - 0000 - 0000</td>
+                  </tr>
+                  <tr>
+                    <th class="text-left">이메일</th>
+                    <td class="text-left">kimpro@prospecs.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="orange-card-area">
+              <img src="../../assets/images/orange-card.png" alt="orange-card-icon">
+              <span class="text-info">E1 오렌지카드 등록시, 프로스펙스 신상품 할인 및 E1 오렌지카드 포인트를 사용하실 수 있습니다.</span>
+              <a href="#" class="orange-card--cf">E1 오렌지카드 인증</a>
+              <span class="orange-card--cf on"   style="display:none;">E1 오렌지카드 인증 완료</span>
+            </div>
+            <!-- orange-card-area --> 
+
+            <div class="ps-cont-head">
+              <h4 class="font-bold">배송정보</h4>
+              <small class="small-desc self-end essential">필수 입력 정보</small>
+            </div>
+            <div class="ps-table type2">
+              <table>
+                <colgroup>
+                  <col style="width: 220px;">
+                  <col style="width: auto">                            
+                </colgroup>            
+                <tbody>              
+                  <tr>
+                    <th scope="row" class="essential">배송지 선택</th>
+                    <td colspan="2">                  
+                      <div class="radio-box">
+                        <div class="ps-chkbox">
+                          <label>
+                            <input type="radio" name="delivery-ck" id="" checked="checked">
+                            <span class="text">최근 배송지</span>
+                          </label>
+                        </div>
+                        <div class="ps-chkbox">
+                          <label>
+                            <input type="radio" name="delivery-ck" id="">
+                            <span class="text">주문자 정보와 동일</span>
+                          </label>
+                        </div>
+                        <div class="ps-chkbox">
+                          <label>
+                            <input type="radio" name="delivery-ck" id="">
+                            <span class="text">새로입력</span>
+                          </label>
+                        </div>
+                      </div>  
+                      <a href="javascript:void(0)" class="ps-btn type4">배송지 관리</a>                
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="essential">이름</th>
+                    <td colspan="2">
+                      <div class="ps-input w_260">
+                        <input type="text" class="inp">
+                      </div>
+                    </td>               
+                  </tr>
+                  <tr>
+                    <th scope="row" class="essential">휴대폰 번호</th>
+                    <td colspan="2">                    
+                      <div class="flex-cont-wrap phone">
+                        <select name="" id="" class="ps-select h-small">
+                          <option value="">010</option>
+                          <option value="">011</option>
+                          <option value="">019</option>                      
+                        </select>
+                        <div class="ps-input">
+                          <input type="text" class="inp">
+                        </div>
+                        <div class="ps-input">
+                          <input type="text" class="inp">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="essential top">주소</th>
+                    <td colspan="2">                    
+                      <div class="address-cont">
+                        <div class="top flex items-center">
+                          <div class="ps-input">
+                            <input type="text" class="inp text-center" readonly="">
+                          </div>
+                          <a href="javascript:void(0)" class="ps-btn type4 ver-top">우편번호 찾기</a>
+                          <div class="ps-chkbox ml-20">
+                            <label>
+                              <input type="checkbox" name="" id="">
+                              <span class="text">이 주소를 기본 배송지로 등록 합니다.</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="bottom flex">
+                          <div class="ps-input">
+                            <input type="text" class="inp">
+                          </div>
+                          <div class="ps-input">
+                            <input type="text" class="inp">
+                          </div>
+                        </div>
+                      </div>              
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="essential">배송요청사항</th>
+                    <td colspan="2" class="po-rela">
+                      <select name="" id="" class="ps-select h-small w-280">
+                        <option value="">문앞에 두세요</option>
+                        <option value="">경비실에 맞겨주세요</option>
+                        <option value=""></option>                      
+                      </select>
+                      <div class="ps-input dis-bl mt-8 min-w-full">
+                        <input type="text" class="inp" placeholder="">
+                      </div>
+                      <p class="td-notice">택배기사님께 전달하는 메시지는 배송상황 및 요청내용에 따라 반영되지 않을 수 있습니다.</p>
+                    </td>               
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 배송정보 -->
+            <div class="ps-cont-head">
+              <h4 class="font-bold">결제정보</h4>
+            </div>
+            <div class="ps-table type2">
+              <table>
+                <colgroup>
+                  <col style="width: 220px;">
+                  <col style="width: auto">                            
+                </colgroup>            
+                <tbody>              
+                  <tr>
+                    <th scope="row">
+                      쿠폰
+                      <div class="tooltip-box etc">
+                        <button type="button" class="ps-btn icon tooltip"><span>툴팁</span></button>
+                        <div class="tooltip-box-cont">
+                          <p>
+                            쿠폰마다 사용제한 조건이 다를 수 있으며,<br>
+                            일부 상품은 쿠폰 사용에 제외될 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+                    </th>
+                    <td colspan="2">                  
+                      <div class="ps-input">
+                        <input type="text" class="inp" style="text-align:right;">
+                      </div>
+                      <span class="won">원</span>
+                      <a href="javascript:void(0)" class="ps-btn type4 trigger">쿠폰 조회/적용</a>                
+                      <span class="use-coupons">사용가능한 쿠폰 : <span>2장</span></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="top">포인트</th>
+                    <td colspan="2">
+                      <div class="point-cont flex items-center">
+                        <div class="tit">
+                          보유 포인트
+                          <div class="tooltip-box etc">
+                            <button type="button" class="ps-btn icon tooltip"><span>툴팁</span></button>
+                            <div class="tooltip-box-cont">
+                              <p>
+                                포인트 구매 시, 최소결제금액은 1,000원 이상<br>
+                                결제 가능하며 100p 단위로 사용가능합니다.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-input">
+                          <input type="text" class="inp">
+                        </div>                   
+                        <span class="won">P</span>  
+                        <span class="use-point">나의 포인트 : <span>500P</span></span>
+                        <div class="ps-chkbox ml-16">
+                          <label>
+                            <input type="checkbox" name="" id="">
+                            <span class="text">모두사용</span>
+                          </label>                          
+                        </div>  
+                      </div>
+                      <div class="point-cont flex items-center">
+                        <div class="tit">
+                          즉시할인 포인트
+                          <div class="tooltip-box etc">
+                            <button type="button" class="ps-btn icon tooltip"><span>툴팁</span></button>
+                            <div class="tooltip-box-cont">
+                              <p>
+                                즉시할인 포인트는 구매 후, 적립 받을<br>
+                                총 포인트에서 60%로 환산되어 사용합니다.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ps-input">
+                          <input type="text" class="inp">
+                        </div>                     
+                        <span class="won">P</span>  
+                        <span class="use-point">구매가능 포인트 : <span>2,300P</span>/</span>
+                        <span class="use-point">적립예정 포인트 : <span>3,950P</span></span>
+                        <div class="ps-chkbox ml-16">
+                          <label>
+                            <input type="checkbox" name="" id="">
+                            <span class="text">사용</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>               
+                  </tr>
+                  <tr>
+                    <th scope="row" class="top">
+                      E1 오렌지카드<br> 포인트
+                      <div class="tooltip-box etc">
+                        <button type="button" class="ps-btn icon tooltip"><span>툴팁</span></button>
+                        <div class="tooltip-box-cont">
+                          <p>
+                            오렌지카드 포인트<br>
+                            안내사항 기재
+                          </p>
+                        </div>
+                      </div>
+                    </th>
+                    <td colspan="2">                    
+                      <div class="orange-info-01 flex">
+                        <div class="tit">카드번호</div>
+                          <div class="flex-cont-wrap card-num">
+                          <div class="ps-input">
+                            <input type="text" class="inp text-center">
+                          </div>                   
+                          <div class="ps-input">
+                            <input type="text" class="inp text-center">
+                          </div>                   
+                          <div class="ps-input">
+                            <input type="text" class="inp text-center">
+                          </div>
+                          <div class="ps-input">
+                            <input type="text" class="inp text-center">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="orange-info-02 flex">
+                        <div class="tit">비밀번호</div>
+                        <div class="ps-input">
+                          <input type="text" class="inp">
+                        </div>                   
+                        <a href="javascript:void(0)" class="ps-btn type4 ml-10">조회</a>                
+                      </div>
+                      <div class="orange-info-03 flex">
+                        <div class="tit">사용가능 포인트</div>
+                        <div class="ps-input">
+                          <input type="text" class="inp bor-n text-right" value="200">
+                        </div> 
+                        <span class="won">P</span>
+                      </div>
+                      <div class="orange-info-04 flex">
+                        <div class="tit">사용할 포인트</div>
+                        <div class="ps-input">
+                          <input type="text" class="inp text-right">
+                        </div> 
+                        <span class="won">P</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">LS네트웍스<br> 모바일상품권</th>
+                    <td colspan="2">                  
+                      <div class="ps-input">
+                        <input type="text" class="inp" style="text-align:right;">
+                      </div>
+                      <span class="won">원</span>
+                      <a href="javascript:void(0)" class="ps-btn type4">조회/적용</a>                
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 결제정보 -->
+            <div class="ps-cont-head bor-n">
+              <h4 class="font-bold">결제방법 선택</h4>
+            </div>
+            <div class="radio-box--tab">
+                <div class="radio-box">
+                  <div class="ps-chkbox">
+                    <label for="payment-01">
+                      <input type="radio" name="payment-ck" id="payment-01" checked="checked" onclick="openRadioTab(event, 'credit-card')">
+                      <span class="text">신용카드</span>
+                    </label>
+                  </div>
+                  <div class="ps-chkbox">
+                    <label for="payment-02">
+                      <input type="radio" name="payment-ck" id="payment-02" onclick="openRadioTab(event, 'account-transfer')">
+                      <span class="text">실시간 계좌이체</span>
+                    </label>
+                  </div>
+                  <div class="ps-chkbox">
+                    <label for="payment-03">
+                      <input type="radio" name="payment-ck" id="payment-03" onclick="openRadioTab(event, 'virtual-account')">
+                      <span class="text">무통장입금(가상계좌)</span>
+                    </label>
+                  </div>
+                  <div class="ps-chkbox">
+                    <label for="payment-04">
+                      <input type="radio" name="payment-ck" id="payment-04" onclick="openRadioTab(event, 'kakao-pay')">
+                      <span class="text">카카오페이</span>
+                    </label>
+                  </div>
+                  <div class="ps-chkbox">
+                    <label for="payment-05">
+                      <input type="radio" name="payment-ck" id="payment-05" onclick="openRadioTab(event, 'payco')">
+                      <span class="text">페이코 간편결제</span>
+                    </label>
+                  </div>
+                  <div class="ps-chkbox">
+                    <label for="payment-06">
+                      <input type="radio" name="payment-ck" id="payment-06" onclick="openRadioTab(event, 'smile-pay')">
+                      <span class="text">스마일페이</span>
+                    </label>
+                  </div>
+                </div>  
+            </div>
+            <!-- radio-box--tab -->
+
+            <div class="resultArea">
+              <div class="tabcontent" id="credit-card">
+                <div class="ps-table type3">
+                  <table>
+                    <colgroup>
+                      <col style="width: 220px;">
+                      <col style="width: auto">                            
+                    </colgroup>            
+                    <tbody>              
+                      <tr>
+                        <th scope="row" class="text-left">카드 선택</th>
+                        <td colspan="2" class="text-left pl-0">                  
+                          <select name="" id="" class="ps-select h-small w-280">
+                            <option value="">카드사를 선택해주세요.</option>
+                            <option value="">삼성카드</option>
+                            <option value="">하나카드</option>
+                            <option value="">KB카드</option>
+                            <option value="">우리카드</option>
+                            <option value="">NH카드</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <ul class="ps-list type5">
+                    <li>※ 익스플로러 브라우저로 결제시 “ 도구 > 팝업차단 > 팝업차단 끄기 ” 를 미리 설정하시면 원활한 결제 진행이 가능 합니다. 미리 팝업차단 끄기를 설정하세요.</li>
+                    <li>※ 크롬 브라우저에서는 “ 우측 상단의 옵션 아이콘 > 설정 > 고급 > 콘텐츠 설정 > 팝업 > 허용 ”에서 미리 설정하시면 원활한 결제가 진행이 가능합니다. 미리 팝업차단을 허용하세요.</li>
+                </ul>
+              </div>
+              <div class="tabcontent"  id="account-transfer">
+                <div class="ps-table type3">
+                  <table>
+                    <colgroup>
+                      <col style="width: 220px;">
+                      <col style="width: auto">                            
+                    </colgroup>            
+                    <tbody>              
+                      <tr>
+                        <th scope="row" class="text-left">환불계좌정보</th>
+                        <td colspan="2" class="text-left pl-0">                  
+                          <select name="" id="" class="ps-select h-small">
+                            <option value="">선택하세요</option>
+                            <option value="">하나은행</option>
+                            <option value="">KB은행</option>
+                            <option value="">우리은행</option>
+                            <option value="">농협은행</option>
+                            <option value="">기업은행</option>
+                          </select>
+                          <div class="ps-input dis-in-block">
+                            <input type="text" class="inp w_195" style="text-align:right;" placeholder="예금주명을 입력해주세요">
+                          </div>
+                        </td>                        
+                      </tr>
+                      <tr class="bor-n">
+                        <th></th>
+                        <td class="pl-0">
+                          <div class="ps-input dis-in-block">
+                            <input type="text" class="inp w_250 ver-top" placeholder="- 빼고 입력">
+                          </div>
+                          <a href="javascript:void(0)" class="ps-btn type4 dis-in-block ver-top">계좌번호 인증</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <ul class="ps-list type5">
+                    <li>※ 환불 받으실 계좌번호를 등록하시면 주문상품 취소 및 반품 시 해당 계좌로 2일 이내(영업일 기준) 입금 됩니다.</li>
+                    <li>※ 입력된 계좌 정보는 주 환불계좌로 자동 등록되며, ‘마이페이지 > 환불계좌관리’ 에서 확인/수정이 가능합니다.</li>
+                </ul>
+                <div class="consumer-ck">
+                  <a href="https://mall.sgic.co.kr/csh/iutf/sh/shop/CSHINFO004VM0.mvc?tm=3)" target="_blank">
+                  <img src="../../assets/images/consumer-s.png" alt="소비자피해보상보험icon">
+                  </a>
+                  <div class="ps-chkbox ml-16">
+                    <label>
+                      <input type="checkbox" name="" id="">
+                      <span class="text">소비자 피해 보상보험 가입 신청</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcontent"  id="virtual-account">
+                <div class="ps-table type3">
+                  <table>
+                    <colgroup>
+                      <col style="width: 220px;">
+                      <col style="width: auto">                            
+                    </colgroup>            
+                    <tbody>              
+                      <tr>
+                        <th scope="row" class="text-left">환불계좌정보</th>
+                        <td colspan="2" class="text-left pl-0">                  
+                          <select name="" id="" class="ps-select h-small">
+                            <option value="">선택하세요</option>
+                            <option value="">하나은행</option>
+                            <option value="">KB은행</option>
+                            <option value="">우리은행</option>
+                            <option value="">농협은행</option>
+                            <option value="">기업은행</option>
+                          </select>
+                          <div class="ps-input dis-in-block">
+                            <input type="text" class="inp w_195" style="text-align:right;" placeholder="예금주명을 입력해주세요">
+                          </div>
+                        </td>                        
+                      </tr>
+                      <tr class="bor-n">
+                        <th></th>
+                        <td class="pl-0">
+                          <div class="ps-input dis-in-block">
+                            <input type="text" class="inp w_250 ver-top" placeholder="- 빼고 입력">
+                          </div>
+                          <a href="javascript:void(0)" class="ps-btn type4 dis-in-block ver-top">계좌번호 인증</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <ul class="ps-list type5">
+                    <li>※ 환불 받으실 계좌번호를 등록하시면 주문상품 취소 및 반품 시 해당 계좌로 2일 이내(영업일 기준) 입금 됩니다.</li>
+                    <li>※ 입력된 계좌 정보는 주 환불계좌로 자동 등록되며, ‘마이페이지 > 환불계좌관리’ 에서 확인/수정이 가능합니다.</li>
+                </ul>
+                <div class="consumer-ck">
+                  <a href="https://mall.sgic.co.kr/csh/iutf/sh/shop/CSHINFO004VM0.mvc?tm=3)" target="_blank">
+                  <img src="../../assets/images/consumer-s.png" alt="소비자피해보상보험icon" />
+                  </a>
+                  <div class="ps-chkbox ml-16">
+                    <label>
+                      <input type="checkbox" name="" id="">
+                      <span class="text">소비자 피해 보상보험 가입 신청</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcontent"  id="kakao-pay">
+                <div class="ps-table type3">
+                  <table>
+                    <colgroup>
+                      <col style="width: 220px;">
+                      <col style="width: auto">                            
+                    </colgroup>            
+                    <tbody>              
+                      <tr>
+                        <th scope="row" class="text-left ver-top">카카오페이 결제안내</th>
+                        <td colspan="2" class="text-left pl-0">                  
+                          <ul class="ps-list type2">
+                            <li>카카오페이는 개인 신용카드를 카카오톡앱에 등록/인증하여 결제하는 방식으로 최초 1회 결제정보만 입력하여 간편하게 결제하실 수 있는 모바일 결제 서비스 입니다. </li>
+                            <li>이용 가능한 카드 : BC카드, KB국민카드, 삼성카드, 롯데카드, 외환카드, 하나카드, 현대카드, 씨티카드, NH농협카드, 신한카드</li>
+                            <li>카카오페이로 30만원 이상 결제 시, 특정 카드(신한, BC 제휴 전 카드 및 시티, 삼성, 하나SK)의 경우 별도의 공인인증이 불필요하며, 카카오톡 자체의 고액결제 비밀번호 입력으로 간단한 결제가 가능합니다.</li>
+                          </ul>                        
+                        </td>                        
+                      </tr>
+                      <tr class="bor-n">
+                        <th scope="row" class="text-left ver-top">유의사항</th>
+                        <td class="pl-0">
+                          <ul class="ps-list type2">
+                            <li>본인명의 휴대폰에서 본인명의의 카드등록후 사용 가능합니다.</li>
+                            <li>카카오톡앱 미설치 시 앱스토어에서 앱 설치후 회원가입을 하셔야 합니다.</li>
+                            <li>카카오톡앱 내에서 카카오페이 가입시 카드사 등록/인증을 하셔야 결제가 가능합니다.</li>
+                          </ul>                        
+                        </td>
+                      </tr>
+                      <tr class="bor-n">
+                        <th></th>
+                        <td class="pl-0">
+                          <ul class="ps-list type5">
+                              <li>※ 카카오페이는 무이자할부 및 제휴카드 혜택 내용과 관계가 없습니다.<br />
+                              자세한 사항은 카카오페이 공지사항에서 확인하실 수 있습니다.</li>
+                          </ul>                
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>                
+              </div>
+              <div class="tabcontent"  id="payco">
+                <div class="ps-table type3">
+                  <table>
+                    <colgroup>
+                      <col style="width: 220px;">
+                      <col style="width: auto">                            
+                    </colgroup>            
+                    <tbody>              
+                      <tr>
+                        <th scope="row" class="text-left ver-top">페이코 간편결제안내</th>
+                        <td colspan="2" class="text-left pl-0">                  
+                          <ul class="ps-list type2">
+                            <li>PAYCO는 온/오프라인 쇼핑은 물론 송금, 멤버십 적립까지 가능한 통합 서비스입니다.</li>
+                            <li>휴대폰과 카드 명의자가 동일해야 결제 가능하며, 결제금액 제한은 없습니다.</li>
+                            <li>지원카드: 모든 국내 신용/체크카드</li>
+                          </ul>                        
+                        </td>                        
+                      </tr>                      
+                    </tbody>
+                  </table>
+                </div> 
+              </div>
+              <div class="tabcontent"  id="smile-pay">
+                <div class="ps-table type3">
+                  <table>
+                    <colgroup>
+                      <col style="width: 220px;">
+                      <col style="width: auto">                            
+                    </colgroup>            
+                    <tbody>              
+                      <tr>
+                        <th scope="row" class="text-left ver-top">스마일페이 간편결제안내</th>
+                        <td colspan="2" class="text-left pl-0">                  
+                          <ul class="ps-list type2">
+                            <li>스마일페이는 G마켓/옥션/G9 ID로 별도 앱 설치 없이 신용카드를 등록하여 비밀번호로 결제할 수 있는 간편결제 서비스 입니다(지원카드: 모든 국내 신용/체크카드)</li>
+                            <li>스마일페이는 신용카드, 은행계좌, 휴대폰 명의자와 SMS를 인증받은 휴대폰 명의자가 동일해야 합니다.</li>
+                            <li>스마일페이로 결제할 경우, 스마일페이에서 제공하는 카드사별 무이자, 즉시/청구할인 혜택만 제공됩니다(프로스펙스닷컴 신용카드 즉시할인 적용 제외)</li>
+                          </ul>                        
+                        </td>                        
+                      </tr>                      
+                    </tbody>
+                  </table>
+                </div> 
+              </div>
+            </div>
+          </div>
+          <!-- order-layout--l -->
+
+          <div class="order-layout--r">
+              <div class="order-r-tit">결제금액</div>  
+              <ul class="order-r-list">
+                <li>
+                  <span class="order-r-txt">총 상품금액</span>
+                  <span class="order-r-won">114,000원</span>
+                </li>
+                <li>
+                  <span class="order-r-txt">쿠폰</span>
+                  <span class="order-r-won">- 17,900원</span>
+                </li>
+                <li>
+                  <span class="order-r-txt">포인트</span>
+                  <span class="order-r-won">- 200P</span>
+                </li>
+                <li>
+                  <span class="order-r-txt">E1 오렌지카드 포인트</span>
+                  <span class="order-r-won">- 100P</span>
+                </li>
+                <li>
+                  <span class="order-r-txt">LS네트웍스 모바일상품권</span>
+                  <span class="order-r-won">- 10.000원</span>
+                </li>
+                <li>
+                  <span class="order-r-txt">총 배송비</span>
+                  <span class="order-r-won">0원</span>
+                </li>
+              </ul>
+              <div class="order-r-total-amount">
+                  <span class="total">최종 결제금액</span>
+                  <span class="amount">95,900원</span>
+              </div>
+              <p class="order-noti">주문할 상품의 상품명, 상품가격, 배송정보를 확인하였으며, 구매에 동의하시겠습니까?<br />(전자상거래법 제 8조 2항)</p>
+              <div class="ps-chkbox">
+                <label>
+                  <input type="checkbox" name="" id="">
+                  <span class="text">동의합니다.</span>
+                </label>
+              </div>
+              <div class="order-r-btn">
+                <a href="javascript:void(0)" class="ps-btn type2 w-full">결제하기</a>          
+                <a href="javascript:void(0)" class="ps-btn type1 w-full">취소</a>
+              </div>
+            </div>
+          <!-- order-layout--r -->
+        </div>
+      </div>
+
+    </main>
+    <!--// Main -->
+    <!-- Footer -->
+<footer class="ps-footer">
+  <div class="ps-inner flex">
+    <div class="flex-auto">
+      <a href="#" class="ps-footer__logo">
+        <img src="../../assets/images/footer_logo.svg" alt="prospecs">
+      </a>
+      <ul class="ps-footer__info">
+        <li>(주)LS네트웍스</li>
+        <li>대표이사 : 구지용, 문성준 | 사업자등록번호 : 622-81-04805</li>
+        <li>통신판매업 신고번호 : 2016-경남김해-0229</li>
+        <li>경상남도 김해시 호계로 428, 1층(부원동)</li>
+        <li>개인정보관리 책임자 : 예재승</li>
+      </ul>
+      <ul class="ps-footer__copy">
+        <li class="font-bold text-gray">SGI서울보증안내</li>
+        <li class="text-gray">
+          고객님께서 안전거래를 위해 현금 등으로 결제하신 경우,<br /> 저희 쇼핑몰에서 가입한 소비자피해보상보험 서비스를 이용하실 수 있습니다.
+          <a href="#" class="font-bold">서비스 가입 사실 확인</a>
+        </li>
+        <li class="copyright font-eng font-bold">COPYRIGTH&copy; LS NETWORKS CO. ALL RIGHTS
+          RESERVE</li>
+      </ul>
+    </div>
+    <div class="flex-none overflow-hidden">
+      <ul class="ps-footer__terms float-left">
+        <li><a href="#" class="font-bold">개인정보처리방침</a></li>
+        <li><a href="#" class="text-gray">이용약관</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">A/S 안내</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">앱다운로드</a></li>
+      </ul>
+      <div class="ps-footer__cs float-left">
+        <div class="social-media overflow-hidden">
+          <a href="#" target="_blank" class="float-left"><img src="../../assets/images/icon_facebook.svg"
+              alt="페이스북"></a>
+          <a href="#" target="_blank" class="float-left ml-16"><img src="../../assets/images/icon_youtube.svg"
+              alt="유튜브"></a>
+          <a href="#" target="_blank" class="float-left ml-16"><img src="../../assets/images/icon_insta.svg"
+              alt="인스타그램"></a>
+        </div>
+        <div>
+          <dl>
+            <dt class="font-eng font-bold">CONTACT US</dt>
+            <dd>
+              <ul class="ps-footer__cs-list01">
+                <li>
+                  <span class="text-gray">구매 / 배송 문의</span>
+                </li>
+                <li>
+                  <a href="tel:080-710-1020">080-710-1020</a>
+                </li>
+                <li>
+                  <span class="text-gray">상품정보 / AS문의</span>
+                </li>
+                <li>
+                  <a href="tel:080-023-1020">080-023-1020</a>
+                </li>
+              </ul>
+            </dd>
+            <dd class="text-gray">
+              MON - FIR 09 : 00 - 18:00<br>
+              주말, 공휴일 휴무<br>
+              BREAK TIME : 12:30 - 13:30
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--// Footer -->
+  </div>
+  <script>
+    // AOS.init({
+    //   disable: function msieversion() {
+    //     return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+    //       /Trident.*rv\:11\./))
+    //   }
+    // });
+    // $(function () {
+    //   setTimeout(function () {
+    //     AOS.refresh();
+    //   }, 100);
+    // })    
+  </script>
+<!-- <div class="modal-wrapper"> -->
+<div class="modal-wrapper open">
+  <div class="modal large">
+    <a class="btn-close trigger" href="#">                
+      <img src="../../assets/images/icon_modla-close.png" alt="modal-close-icon">
+    </a>
+    <div class="inner">
+      <div class="modal-container">
+        <div class="modal-title">
+          <h2>배송지 관리</h2>
+        </div>
+        <div class="modal-content">
+
+          <div class="address-list">
+            <div class="item flex items-center">
+              <span class="part1 flex-none">
+                <div class="ps-chkbox">
+                  <label>
+                    <input type="radio" name="adress" id="">
+                    <span class="text">기본 배송지</span>
+                  </label>
+                </div>
+              </span>
+              <div class="part2 flex-1">
+                김프로<br>
+                06000 서울특별시 강남구 논현로 123<br>
+                010-1234-5678
+              </div>
+              <span class="part3 flex-none">
+                <a href="javascript:void(0)" class="ps-btn type4 c-black">삭제</a>
+              </span>
+            </div>
+            <div class="item flex items-center">
+              <span class="part1 flex-none">
+                <div class="ps-chkbox">
+                  <label>
+                    <input type="radio" name="adress" id="">
+                    <span class="text">우리집</span>
+                  </label>
+                </div>
+              </span>
+              <div class="part2 flex-1">
+                김프로<br>
+                06000 서울특별시 강남구 논현로 123<br>
+                010-1234-5678
+              </div>
+              <span class="part3 flex-none">
+                <a href="javascript:void(0)" class="ps-btn type4 c-black">삭제</a>
+              </span>
+            </div>
+            <div class="item flex items-center">
+              <span class="part1 flex-none">
+                <div class="ps-chkbox">
+                  <label>
+                    <input type="radio" name="adress" id="">
+                    <span class="text">우리집</span>
+                  </label>
+                </div>
+              </span>
+              <div class="part2 flex-1">
+                김프로<br>
+                06000 서울특별시 강남구 논현로 123<br>
+                010-1234-5678
+              </div>
+              <span class="part3 flex-none">
+                <a href="javascript:void(0)" class="ps-btn type4 c-black">삭제</a>
+              </span>
+            </div>
+            <div class="item flex items-center">
+              <span class="part1 flex-none">
+                <div class="ps-chkbox">
+                  <label>
+                    <input type="radio" name="adress" id="">
+                    <span class="text">회사</span>
+                  </label>
+                </div>
+              </span>
+              <div class="part2 flex-1">
+                김프로<br>
+                06000 서울특별시 강남구 논현로 123<br>
+                010-1234-5678
+              </div>
+              <span class="part3 flex-none">
+                <a href="javascript:void(0)" class="ps-btn type4 c-black">삭제</a>
+              </span>
+            </div>
+          </div>
+          <div class="w-full ps-btn-wrap list-more mt-40">
+            <a href="javascript:void(0)" class="ps-btn type1">배송지 추가</a>
+            <a href="javascript:void(0)" class="ps-btn type2">배송지 적용</a>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+</body>
+
+</html>

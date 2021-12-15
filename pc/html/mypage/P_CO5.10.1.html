@@ -1,0 +1,603 @@
+<!DOCTYPE html class="msie">
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로스펙스 | 주문결제</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/ps_style_pc.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/jquery-ui.min.css">
+  <script src="../../js/ps_script_pc.js"></script>
+  <script src="../../js/jquery-ui.min.js"></script>
+  <script src="../../js/libs/jquery.selectric.min.js"></script>
+
+  
+  <meta name="Subject" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall " />
+  <meta name="Title" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall" />
+  <meta name="description" content="프로스펙스 공식 온라인 쇼핑몰, 몽벨 공식 온라인 쇼핑몰,스포츠 라이프 스타일,LSNmall, 스포츠,아웃도어,신발,의류,스포츠 용품,자전거" />
+  <meta name="Keywords" content="프로스펙스 공식 온라인 쇼핑몰,프로스펙스,스포츠라이프스타일,,LSNmall,라이프스타일,쇼핑몰,프로스펙스,몽벨,온라인,쇼핑,온라인쇼핑몰,스포츠쇼핑몰,it's my sports,저마다의 스포츠가 있다,  " />
+  <meta name="Author" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall" />
+  <meta name="Publisher" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall" />
+  <meta name="Other Agent" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall" />
+  <meta name="Classification" content="프로스펙스,몽벨,쇼핑몰,몰,스포츠쇼핑몰,패션쇼핑몰,쇼핑,온라인쇼핑몰,공식쇼핑몰,온라인공식쇼핑몰" />
+  <meta name="Reply-To(Email)" content="info@lsnetwork.com" />
+  <!-- META name="Filename" content="index.html" / -->
+  <meta name="Author-Date(Date)" content="LS NETWORKS,2017" />
+  <meta name="Location" content="대한민국,서울,용산" />
+  <meta name="Distribution" content="프로스펙스 공식 온라인 쇼핑몰" />
+  <meta name="Copyright" content="COPYRIGHT © LS NETWORKS CO. ALL RIGHTS RESERVED." />
+  <meta name="Robots" content="ALL" />
+  <meta name="apple-mobile-web-app-title" content="프로스펙스 공식 온라인 쇼핑몰" />
+
+  <!-- 페이스북, 네이버블로그 -->
+  <meta property="og:title" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall " />
+  <meta property="og:description" content="프로스펙스 공식 온라인 쇼핑몰, 몽벨 공식 온라인 쇼핑몰,스포츠,아웃도어,신발,의류,스포츠 용품,자전거,스포츠라이프스타일" />
+  <meta property="og:url" 	content="http://www.lsnmall.com/display.do?cmd=mallMain" /> 
+  <meta property="og:image" 	content="http://image.lsnmall.com/files/upload/lsnmall_logo_250.jpg"/> 
+  <meta property="og:price" 	content=""/> 
+  <meta property="og:type" 	content="website" />
+  <meta property="og:image:width" content="200"/>
+  <meta property="og:image:height" content="200"/>
+
+  <meta name="keywords" content="프로스펙스 공식 온라인 쇼핑몰, 스포츠 라이프 스타일 LSNmall " />
+  <!-- 트위터 -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="프로스펙스 공식 온라인 쇼핑몰 + 스포츠 라이프 스타일 LSNmall " />
+  <meta name="twitter:description" content="프로스펙스 공식 온라인 쇼핑몰, 몽벨 공식 온라인 쇼핑몰,스포츠,아웃도어,신발,의류,스포츠 용품,자전거,스포츠라이프스타일" />
+  <meta name="twitter:url" content="http://www.lsnmall.com/display.do?cmd=mallMain" />
+<meta name="twitter:image" content="http://image.lsnmall.com/files/upload/lsnmall_logo_250.jpg">
+</head>
+
+<body>
+  <div id="psWrap" class="sub">
+    <!-- Header -->
+<header id="psHeader" class="ps-header ">
+  <div class="ps-header--wrap">
+    <div class="ps-inner flex">
+      <div class="ps-header--logo flex-none">
+        <a href="#">PRO-SPECS</a>
+      </div>
+      <nav class="ps-header--gnb flex-auto flex">
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="Shop">SHOP</a>
+          <div class="gnb__dropdown">
+            <div class="ps-inner flex">
+              <div class="dropdown--nav w-full flex flex-nowrap justify-between">
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="font-eng font-extrabold black">SHOES</a></dt>
+                  <dd><a href="#">러닝화</a></dd>
+                  <dd><a href="#">워킹화</a></dd>
+                  <dd><a href="#">트래킹화</a></dd>
+                  <dd><a href="#">아동화</a></dd>
+                  <dd><a href="#">스니커즈</a></dd>
+                  <dd><a href="#">샌들/슬리퍼</a></dd>
+                  <dd><a href="#">기타</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="font-eng font-extrabold black">MEN</a></dt>
+                  <dd><a href="#">트레이닝</a></dd>
+                  <dd><a href="#">아우터</a></dd>
+                  <dd><a href="#">상의</a></dd>
+                  <dd><a href="#">하의</a></dd>
+                  <dd><a href="#">기타</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="font-eng font-extrabold black">WOMEN</a></dt>
+                  <dd><a href="#">트레이닝</a></dd>
+                  <dd><a href="#">아우터</a></dd>
+                  <dd><a href="#">상의</a></dd>
+                  <dd><a href="#">하의</a></dd>
+                  <dd><a href="#">기타</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="font-eng font-extrabold black">BAG/ACC</a></dt>
+                  <dd><a href="#">크로스/토트백</a></dd>
+                  <dd><a href="#">백팩</a></dd>
+                  <dd><a href="#">모자/양말</a></dd>
+                  <dd><a href="#">기타</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="active font-eng font-extrabold black">ORIGINAL</a></dt>
+                  <dd><a href="#">스니커즈</a></dd>
+                  <dd><a href="#">샌들/슬라이드</a></dd>
+                  <dd><a href="#">아동화</a></dd>
+                  <dd><a href="#">의류</a></dd>
+                  <dd><a href="#">용품</a></dd>
+                </dl>
+                <dl class="dropdown--sub">
+                  <dt><a href="#" class="accent-bullet font-eng font-extrabold black">SALE</a></dt>
+                  <dd><a href="#">신발</a></dd>
+                  <dd><a href="#">남성</a></dd>
+                  <dd><a href="#">여성</a></dd>
+                  <dd><a href="#">용품</a></dd>
+                </dl>
+              </div>
+              <div class="dropdown--quick-menu flex-none">
+                <ul class="quick-menu flex flex-nowrap font-eng font-extrabold black">
+                  <li><a href="#">BEST 50</a></li>
+                  <li><a href="#">ISSUE</a></li>
+                  <li><a href="#">BEST REVIEW</a></li>
+                </ul>
+                <a href="#" class="quick-menu--banner shop">
+                  <img src="../../assets/images/quick_banner.png" alt="온라인 단독특가">
+                  <div class="desc">
+                    <span class="badge">온라인 단독특가</span>
+                    <h3 class="title font-bold line-clamp-2">영국 디자인하우스와<br /> 콜라보한 트랙 어글리 스니커즈</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="Event">EVENT</a>
+          <div class="gnb__dropdown">
+            <div class="ps-inner">EVENT</div>
+          </div>
+        </div>
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="Archive">ARCHIVE</a>
+          <div class="gnb__dropdown">
+            <div class="ps-inner">
+              <div class="flex justify-between">
+                <ul class="quick-menu l-type flex font-eng font-extrabold black">
+                  <li><a href="#">LOOKBOOK</a></li>
+                  <li><a href="#">NEWS</a></li>
+                  <li><a href="#">BRAND STORY</a></li>
+                </ul>
+                <div class="flex archive-banner">
+                  <a href="#" class="quick-menu--banner">
+                    <img src="../../assets/images/quick_banner_archive_01.png" alt="브랜드 감사제">
+                    <div class="desc">
+                      <span class="badge red">브랜드 감사제</span>
+                      <h3 class="title font-bold white line-clamp-2">꽝없는 경품룰렛, 오리지널라인<br> 추가할인, 포인트 2배 적립 혜택까지</h3>
+                    </div>
+                  </a>
+                  <a href="#" class="quick-menu--banner">
+                    <img src="../../assets/images/quick_banner_archive_02.png" alt="상품 모음전">
+                    <div class="desc">
+                      <span class="badge">상품 모음전</span>
+                      <h3 class="title font-bold line-clamp-2">클래스가 남다른<br> MD 추천 F/W 상품 모음전</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="SponsorShip">SPONSORSHIP</a>
+          <div class="gnb__dropdown">
+            <div class="ps-inner">SPONSORSHIP</div>
+          </div>
+        </div>
+        <div class="gnb__item">
+          <a href="#" class="gnb__link font-eng font-extrabold" data-target="SmartFit">SMART FIT</a>
+          <div class="gnb__dropdown">
+            <div class="dropdown--bg-wrap smart-fit">
+              <div class="ps-inner flex items-center">
+                <h3 class="title flex-none"><span class="font-eng font-extrabold">SMART FIT</span></h3>
+                <p class="desc font-sans">프로스펙스 스마트핏은 내 발에 완벽한 사이즈와 상품을 추천해 주고, 맞춤신발 제작까지 해 주는 SMART한 서비스입니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="ps-header--util flex-none flex items-center font-eng font-extrabold">
+        <button class="ps-btn ps-icon--search">검색</button>
+        <button class="ps-btn ps-icon--cart">쇼핑백</button>
+        <a href="#" class="h-6 leading-6">LOGIN</a>
+      </div>
+    </div>
+  </div>
+  <div class="ps-header--search w-full">
+    <div class="ps-search--wrap mx-auto">
+      <div class="ps-search--header flex">
+        <div class="ps-input-wrap flex-auto flex items-center">
+          <input type="text" name="" id="" placeholder="프로스펙스 21FW 시즌 오리지널 라인">
+        </div>
+        <button type="button" class="ps-btn search flex-none font-bold">검색</button>
+      </div>
+      <div class="ps-search--body">
+        <h3 class="font-bold">추천 검색어</h3>
+        <div class="flex">
+          <ul class="ps-search-recommend flex-auto">
+            <li><a href="#" class="line-clamp-1">21FW 퍼포먼스</a></li>
+            <li><a href="#" class="line-clamp-1">가을자켓</a></li>
+            <li><a href="#" class="line-clamp-1">후드티</a></li>
+            <li><a href="#" class="line-clamp-1">워킹화</a></li>
+            <li><a href="#" class="line-clamp-1">덴스 오리지널 콜라보레이션</a></li>
+          </ul>
+          <div class="ps-search-banner flex-none">
+            <a href="#">
+              <img src="../../assets/images/banner_search.png" alt="프로스펙스 x 굿네이션">
+              <p class="font-medium line-clamp-1">프로스펙스 x 굿네이션</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--// Header -->
+    <!-- Main -->
+    <main>
+      <div class="ps-inner po-rela">
+        <div class="ps-inner my-page">
+          <div class="my-page--left">
+            <div class="my-page--tit">마이페이지</div>
+            <dl>
+              <dt>쇼핑내역</dt>
+              <dd class="on"><a href="#">주문/배송 조회</a></dd>
+              <dd><a href="#">교환/반품/취소 신청</a></dd>
+              <dd><a href="#">교환/반품/취소 내역</a></dd>
+
+              <dt>쇼핑혜택</dt>
+              <dd><a href="">쿠폰</a></dd>
+              <dd><a href="">포인트</a></dd>
+              <dd><a href="">모바일상품권 조회</a></dd>
+
+              <dt>쇼핑리스트</dt>
+              <dd><a href="">위시리스트</a></dd>
+              <dd><a href="">오늘본상품</a></dd>
+              <dd><a href="">장바구니</a></dd>
+
+              <dt>쇼핑활동</dt>
+              <dd><a href="">리뷰</a></dd>
+              <dd><a href="">1:1 문의</a></dd>
+
+              <dt>회원정보</dt>
+              <dd><a href="">회원정보수정</a></dd>
+              <dd><a href="">배송지관리</a></dd>
+              <dd><a href="">환불계좌관리</a></dd>
+              <dd><a href="">회원탈퇴</a></dd>
+            </dl>
+          </div>
+          <div class="my-page--right">
+            <div class="ps-breadcrumb">
+              <span>HOME</span>
+              <span>마이페이지</span>
+              <span>쇼핑활동</span>
+              <span>리뷰</span>
+            </div>
+            <div class="ps-tab--wrap type1 small">
+              <a href="#" class="ps-tab--item active">미작성 리뷰(<span>8</span>)</a>
+              <a href="#" class="ps-tab--item">작성한 리뷰(<span>8</span>)</a>
+            </div>
+
+            <div class="ps-cont-head dis-bl">
+              <p class="review-top--info">8개의 리뷰를 작성하면, 최대 8,000원의 포인트를 받을 수 있습니다.</p>
+            </div>            
+            <div class="ps-table type2">
+              <table>
+                <colgroup>                
+                  <col style="width: auto">
+                  <col style="width: 50%;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-left">
+                      <img src="../../assets/images/dummy-01.png" alt="dummy" class="product-img">
+                      <div class="pro-order--info">
+                        <p class="pro-name">볼테일 101</p>
+                        <div class="pro-info">
+                          <span class="pro-color">화이트</span>
+                          <span class="pro-size">240</span> | 
+                          <span class="pro-amount">수량 : </span>
+                          <span class="pro-number">1개</span>
+                        </div>
+                        <p class="pro-noti">2021.01.19에 구매하신 상품입니다.</p>
+                      </div>
+                    </td>                  
+                    <td class="text-right">
+                      <a href="javascript:void(0)" class="ps-btn type4 h-40-w190">리뷰 작성</a>
+                      <div class="review-info">
+                        <span>작성기한:2021.11.15 (D-12)</span>
+                        <span>포인트 최대 <strong>1,000원</strong></span>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            <dl class="ps-i-cont">
+              <dt></dt>
+              <dd>
+                <ul class="ps-list type1">
+                  <li>일반 리뷰 작성시 200 포인트 지급</li>
+                  <li>포토 리뷰 작성시 1,000 포인트 지급</li>
+                  <li>베스트 리뷰 선정시 +1,000 포인트 지급</li>
+                  <li>상품의 첫 리뷰 작성시 +1,000 포인트 지급</li>
+                  <li>리뷰 작성은 결제완료일로부터 30일까지, 배송중 이후 부터 작성 가능합니다.</li>
+                  <li>리뷰 포인트는 리뷰 작성+14일 후 적립됩니다.</li>
+                  <li>반품 접수시 리뷰 포인트는 회수됩니다.</li>
+                </ul>
+              </dd>
+            </dl>
+            
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <!--// Main -->
+    <!-- Footer -->
+<footer class="ps-footer">
+  <div class="ps-inner flex">
+    <div class="flex-auto">
+      <a href="#" class="ps-footer__logo">
+        <img src="../../assets/images/footer_logo.svg" alt="prospecs">
+      </a>
+      <ul class="ps-footer__info">
+        <li>(주)LS네트웍스</li>
+        <li>대표이사 : 구지용, 문성준 | 사업자등록번호 : 622-81-04805</li>
+        <li>통신판매업 신고번호 : 2016-경남김해-0229</li>
+        <li>경상남도 김해시 호계로 428, 1층(부원동)</li>
+        <li>개인정보관리 책임자 : 예재승</li>
+      </ul>
+      <ul class="ps-footer__copy">
+        <li class="font-bold text-gray">SGI서울보증안내</li>
+        <li class="text-gray">
+          고객님께서 안전거래를 위해 현금 등으로 결제하신 경우,<br /> 저희 쇼핑몰에서 가입한 소비자피해보상보험 서비스를 이용하실 수 있습니다.
+          <a href="#" class="font-bold">서비스 가입 사실 확인</a>
+        </li>
+        <li class="copyright font-eng font-bold">COPYRIGTH&copy; LS NETWORKS CO. ALL RIGHTS
+          RESERVE</li>
+      </ul>
+    </div>
+    <div class="flex-none overflow-hidden">
+      <ul class="ps-footer__terms float-left">
+        <li><a href="#" class="font-bold">개인정보처리방침</a></li>
+        <li><a href="#" class="text-gray">이용약관</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">A/S 안내</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">앱다운로드</a></li>
+      </ul>
+      <div class="ps-footer__cs float-left">
+        <div class="social-media overflow-hidden">
+          <a href="#" target="_blank" class="float-left"><img src="../../assets/images/icon_facebook.svg"
+              alt="페이스북"></a>
+          <a href="#" target="_blank" class="float-left ml-16"><img src="../../assets/images/icon_youtube.svg"
+              alt="유튜브"></a>
+          <a href="#" target="_blank" class="float-left ml-16"><img src="../../assets/images/icon_insta.svg"
+              alt="인스타그램"></a>
+        </div>
+        <div>
+          <dl>
+            <dt class="font-eng font-bold">CONTACT US</dt>
+            <dd>
+              <ul class="ps-footer__cs-list01">
+                <li>
+                  <span class="text-gray">구매 / 배송 문의</span>
+                </li>
+                <li>
+                  <a href="tel:080-710-1020">080-710-1020</a>
+                </li>
+                <li>
+                  <span class="text-gray">상품정보 / AS문의</span>
+                </li>
+                <li>
+                  <a href="tel:080-023-1020">080-023-1020</a>
+                </li>
+              </ul>
+            </dd>
+            <dd class="text-gray">
+              MON - FIR 09 : 00 - 18:00<br>
+              주말, 공휴일 휴무<br>
+              BREAK TIME : 12:30 - 13:30
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--// Footer -->
+  </div>
+  <script>
+    // AOS.init({
+    //   disable: function msieversion() {
+    //     return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+    //       /Trident.*rv\:11\./))
+    //   }
+    // });
+    // $(function () {
+    //   setTimeout(function () {
+    //     AOS.refresh();
+    //   }, 100);
+    // })    
+  </script>
+</body>
+
+</html>

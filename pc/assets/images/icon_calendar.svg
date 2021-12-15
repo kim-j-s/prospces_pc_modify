@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon_달력" transform="translate(-768 -1313)">
+    <rect id="사각형_658" data-name="사각형 658" width="24" height="24" transform="translate(768 1313)" fill="none" opacity="0.2"/>
+    <g id="사각형_654" data-name="사각형 654" transform="translate(768 1315)" fill="#fff" stroke="#222" stroke-width="2">
+      <rect width="24" height="21" stroke="none"/>
+      <rect x="1" y="1" width="22" height="19" fill="none"/>
+    </g>
+    <g id="사각형_655" data-name="사각형 655" transform="translate(770 1321.25)" fill="#fff" stroke="#222" stroke-width="1">
+      <rect width="20" height="2" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="1" fill="none"/>
+    </g>
+    <rect id="사각형_656" data-name="사각형 656" width="2" height="4" transform="translate(773.5 1314)" fill="#222"/>
+    <rect id="사각형_657" data-name="사각형 657" width="2" height="4" transform="translate(784.5 1314)" fill="#222"/>
+  </g>
+</svg>
