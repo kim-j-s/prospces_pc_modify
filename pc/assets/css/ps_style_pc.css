@@ -10446,13 +10446,11 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	margin-left:18px;
 }
 .order-layout--l > .orange-card-area > .orange-card--cf{
+	position:relative;
+	display:inline-block;
 	color:#ec771c;
 	font-size:15px;
-	float:right;
-	display:inline-block;
 	vertical-align:middle;
-	position:relative;
-	top:15px;
 }
 .order-layout--l > .orange-card-area > .orange-card--cf:after{
 	content:'';
