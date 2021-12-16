@@ -228,9 +228,10 @@
     <!-- Main -->
     <main>
       <div class="ps-inner po-rela">
-        <div class="ps-breadcrumb">
+        <div class="ps-step">
           <span>장바구니</span>
-          <span>주문결제</span>              
+          <span class="on">주문결제</span>
+          <span>주문완료</span>
         </div>
         <h3 class="ps-subtitle font-eng font-bold">주문결제</h3>
         <div class="order-layout po-rela">
@@ -238,7 +239,7 @@
             <div class="ps-cont-head">
               <h4 class="font-bold self-end">주문정보</h4>
               <div class="ps-cont-head--side self-end">
-                <small class="small-desc">물류와 매장에서 택배배송</small>
+                <small class="small-desc font-s18">물류와 매장에서 택배배송</small>
               </div>
             </div>
             <div class="ps-table type2 order">
@@ -271,8 +272,8 @@
                         </div>
                       </div>
                     </td>
-                    <td class="text-center">79,000원</td>
-                    <td class="text-center font-bold">79,000원</td>
+                    <td class="text-center font-s18">79,000원</td>
+                    <td class="text-center font-bold font-s18">79,000원</td>
                     <td class="text-center">1</td>
                     <td class="text-center" rowspan="2">무료배송</td>
                   </tr>
@@ -301,7 +302,7 @@
             <div class="ps-table type2 order">
               <table>
                 <colgroup>
-                  <col style="width: 15%;">
+                  <col style="width: 150px;">
                   <col style="width: auto">
                 </colgroup>
                 <tbody>
@@ -336,13 +337,13 @@
             <div class="ps-table type2">
               <table>
                 <colgroup>
-                  <col style="width: 220px;">
+                  <col style="width: 150px;">
                   <col style="width: auto">                            
                 </colgroup>            
                 <tbody>              
                   <tr>
                     <th scope="row" class="essential">배송지 선택</th>
-                    <td colspan="2">                  
+                    <td>
                       <div class="radio-box">
                         <div class="ps-chkbox">
                           <label>
@@ -368,7 +369,7 @@
                   </tr>
                   <tr>
                     <th scope="row" class="essential">이름</th>
-                    <td colspan="2">
+                    <td>
                       <div class="ps-input w_260">
                         <input type="text" class="inp">
                       </div>
@@ -376,7 +377,7 @@
                   </tr>
                   <tr>
                     <th scope="row" class="essential">휴대폰 번호</th>
-                    <td colspan="2">                    
+                    <td>                    
                       <div class="flex-cont-wrap phone">
                         <select name="" id="" class="ps-select h-small">
                           <option value="">010</option>
@@ -394,7 +395,7 @@
                   </tr>
                   <tr>
                     <th scope="row" class="essential top">주소</th>
-                    <td colspan="2">                    
+                    <td>                    
                       <div class="address-cont">
                         <div class="top flex items-center">
                           <div class="ps-input">
@@ -420,14 +421,14 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row" class="essential">배송요청사항</th>
-                    <td colspan="2" class="po-rela">
-                      <select name="" id="" class="ps-select h-small w-280">
+                    <th scope="row" class="essential top">배송요청사항</th>
+                    <td class="po-rela">
+                      <select name="" id="" class="ps-select h-small w_370">
                         <option value="">문앞에 두세요</option>
                         <option value="">경비실에 맞겨주세요</option>
                         <option value=""></option>                      
                       </select>
-                      <div class="ps-input dis-bl mt-8 min-w-full">
+                      <div class="ps-input dis-bl mt-8 w_800">
                         <input type="text" class="inp" placeholder="">
                       </div>
                       <p class="td-notice">택배기사님께 전달하는 메시지는 배송상황 및 요청내용에 따라 반영되지 않을 수 있습니다.</p>
@@ -443,7 +444,7 @@
             <div class="ps-table type2">
               <table>
                 <colgroup>
-                  <col style="width: 220px;">
+                  <col style="width: 150px;">
                   <col style="width: auto">                            
                 </colgroup>            
                 <tbody>              
@@ -460,7 +461,7 @@
                         </div>
                       </div>
                     </th>
-                    <td colspan="2">                  
+                    <td>
                       <div class="ps-input">
                         <input type="text" class="inp" style="text-align:right;">
                       </div>
@@ -471,7 +472,7 @@
                   </tr>
                   <tr>
                     <th scope="row" class="top">포인트</th>
-                    <td colspan="2">
+                    <td>
                       <div class="point-cont flex items-center">
                         <div class="tit">
                           보유 포인트
@@ -538,7 +539,7 @@
                         </div>
                       </div>
                     </th>
-                    <td colspan="2">                    
+                    <td>                    
                       <div class="orange-info-01 flex">
                         <div class="tit">카드번호</div>
                           <div class="flex-cont-wrap card-num">
@@ -581,7 +582,7 @@
                   </tr>
                   <tr>
                     <th scope="row">LS네트웍스<br> 모바일상품권</th>
-                    <td colspan="2">                  
+                    <td>                  
                       <div class="ps-input">
                         <input type="text" class="inp" style="text-align:right;">
                       </div>
@@ -643,14 +644,14 @@
                 <div class="ps-table type3">
                   <table>
                     <colgroup>
-                      <col style="width: 220px;">
+                      <col style="width: 150px;">
                       <col style="width: auto">                            
                     </colgroup>            
                     <tbody>              
                       <tr>
                         <th scope="row" class="text-left">카드 선택</th>
-                        <td colspan="2" class="text-left pl-0">                  
-                          <select name="" id="" class="ps-select h-small w-280">
+                        <td class="text-left pl-0">                  
+                          <select name="" id="" class="ps-select h-small w_370">
                             <option value="">카드사를 선택해주세요.</option>
                             <option value="">삼성카드</option>
                             <option value="">하나카드</option>
@@ -664,49 +665,50 @@
                   </table>
                 </div>
                 <ul class="ps-list type5">
-                    <li>※ 익스플로러 브라우저로 결제시 “ 도구 > 팝업차단 > 팝업차단 끄기 ” 를 미리 설정하시면 원활한 결제 진행이 가능 합니다. 미리 팝업차단 끄기를 설정하세요.</li>
-                    <li>※ 크롬 브라우저에서는 “ 우측 상단의 옵션 아이콘 > 설정 > 고급 > 콘텐츠 설정 > 팝업 > 허용 ”에서 미리 설정하시면 원활한 결제가 진행이 가능합니다. 미리 팝업차단을 허용하세요.</li>
+                  <li>※ 익스플로러 브라우저로 결제시 “ 도구 > 팝업차단 > 팝업차단 끄기 ” 를 미리 설정하시면 원활한 결제 진행이 가능 합니다. 미리 팝업차단 끄기를 설정하세요.</li>
+                  <li>※ 크롬 브라우저에서는 “ 우측 상단의 옵션 아이콘 > 설정 > 고급 > 콘텐츠 설정 > 팝업 > 허용 ”에서 미리 설정하시면 원활한 결제가 진행이 가능합니다. 미리 팝업차단을 허용하세요.</li>
                 </ul>
               </div>
               <div class="tabcontent"  id="account-transfer">
                 <div class="ps-table type3">
                   <table>
                     <colgroup>
-                      <col style="width: 220px;">
+                      <col style="width: 150px;">
                       <col style="width: auto">                            
                     </colgroup>            
                     <tbody>              
                       <tr>
-                        <th scope="row" class="text-left">환불계좌정보</th>
-                        <td colspan="2" class="text-left pl-0">                  
-                          <select name="" id="" class="ps-select h-small">
-                            <option value="">선택하세요</option>
-                            <option value="">하나은행</option>
-                            <option value="">KB은행</option>
-                            <option value="">우리은행</option>
-                            <option value="">농협은행</option>
-                            <option value="">기업은행</option>
-                          </select>
-                          <div class="ps-input dis-in-block">
-                            <input type="text" class="inp w_195" style="text-align:right;" placeholder="예금주명을 입력해주세요">
+                        <th scope="row" class="text-left top">환불계좌정보</th>
+                        <td class="text-left pl-0">
+                          <div class="account-info-wrap">
+                            <div class="top">
+                              <select name="" id="" class="ps-select h-small w_180">
+                                <option value="">선택하세요</option>
+                                <option value="">하나은행</option>
+                                <option value="">KB은행</option>
+                                <option value="">우리은행</option>
+                                <option value="">농협은행</option>
+                                <option value="">기업은행</option>
+                              </select>
+                              <div class="ps-input">
+                                <input type="text" class="inp" placeholder="예금주명을 입력해주세요">
+                              </div>
+                            </div>
+                            <div class="bottom">
+                              <div class="ps-input">
+                                <input type="text" class="inp" placeholder="- 빼고 입력">
+                              </div>
+                              <a href="javascript:void(0)" class="ps-btn type4">계좌번호 인증</a>
+                            </div>
                           </div>
                         </td>                        
-                      </tr>
-                      <tr class="bor-n">
-                        <th></th>
-                        <td class="pl-0">
-                          <div class="ps-input dis-in-block">
-                            <input type="text" class="inp w_250 ver-top" placeholder="- 빼고 입력">
-                          </div>
-                          <a href="javascript:void(0)" class="ps-btn type4 dis-in-block ver-top">계좌번호 인증</a>
-                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <ul class="ps-list type5">
-                    <li>※ 환불 받으실 계좌번호를 등록하시면 주문상품 취소 및 반품 시 해당 계좌로 2일 이내(영업일 기준) 입금 됩니다.</li>
-                    <li>※ 입력된 계좌 정보는 주 환불계좌로 자동 등록되며, ‘마이페이지 > 환불계좌관리’ 에서 확인/수정이 가능합니다.</li>
+                  <li>※ 환불 받으실 계좌번호를 등록하시면 주문상품 취소 및 반품 시 해당 계좌로 2일 이내(영업일 기준) 입금 됩니다.</li>
+                  <li>※ 입력된 계좌 정보는 주 환불계좌로 자동 등록되며, ‘마이페이지 > 환불계좌관리’ 에서 확인/수정이 가능합니다.</li>
                 </ul>
                 <div class="consumer-ck">
                   <a href="https://mall.sgic.co.kr/csh/iutf/sh/shop/CSHINFO004VM0.mvc?tm=3)" target="_blank">
@@ -724,41 +726,42 @@
                 <div class="ps-table type3">
                   <table>
                     <colgroup>
-                      <col style="width: 220px;">
+                      <col style="width: 150px;">
                       <col style="width: auto">                            
                     </colgroup>            
                     <tbody>              
                       <tr>
-                        <th scope="row" class="text-left">환불계좌정보</th>
-                        <td colspan="2" class="text-left pl-0">                  
-                          <select name="" id="" class="ps-select h-small">
-                            <option value="">선택하세요</option>
-                            <option value="">하나은행</option>
-                            <option value="">KB은행</option>
-                            <option value="">우리은행</option>
-                            <option value="">농협은행</option>
-                            <option value="">기업은행</option>
-                          </select>
-                          <div class="ps-input dis-in-block">
-                            <input type="text" class="inp w_195" style="text-align:right;" placeholder="예금주명을 입력해주세요">
+                        <th scope="row" class="text-left top">환불계좌정보</th>
+                        <td class="text-left pl-0">
+                          <div class="account-info-wrap">
+                            <div class="top">
+                              <select name="" id="" class="ps-select h-small w_180">
+                                <option value="">선택하세요</option>
+                                <option value="">하나은행</option>
+                                <option value="">KB은행</option>
+                                <option value="">우리은행</option>
+                                <option value="">농협은행</option>
+                                <option value="">기업은행</option>
+                              </select>
+                              <div class="ps-input">
+                                <input type="text" class="inp" placeholder="예금주명을 입력해주세요">
+                              </div>
+                            </div>
+                            <div class="bottom">
+                              <div class="ps-input">
+                                <input type="text" class="inp" placeholder="- 빼고 입력">
+                              </div>
+                              <a href="javascript:void(0)" class="ps-btn type4">계좌번호 인증</a>
+                            </div>
                           </div>
                         </td>                        
-                      </tr>
-                      <tr class="bor-n">
-                        <th></th>
-                        <td class="pl-0">
-                          <div class="ps-input dis-in-block">
-                            <input type="text" class="inp w_250 ver-top" placeholder="- 빼고 입력">
-                          </div>
-                          <a href="javascript:void(0)" class="ps-btn type4 dis-in-block ver-top">계좌번호 인증</a>
-                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <ul class="ps-list type5">
                     <li>※ 환불 받으실 계좌번호를 등록하시면 주문상품 취소 및 반품 시 해당 계좌로 2일 이내(영업일 기준) 입금 됩니다.</li>
-                    <li>※ 입력된 계좌 정보는 주 환불계좌로 자동 등록되며, ‘마이페이지 > 환불계좌관리’ 에서 확인/수정이 가능합니다.</li>
+                    <li>※ 입력된 계좌 정보는 주 환불계좌로 자동 등록되며, ‘마이페이지 &gt; 환불계좌관리’ 에서 확인/수정이 가능합니다.</li>
                 </ul>
                 <div class="consumer-ck">
                   <a href="https://mall.sgic.co.kr/csh/iutf/sh/shop/CSHINFO004VM0.mvc?tm=3)" target="_blank">
@@ -776,13 +779,13 @@
                 <div class="ps-table type3">
                   <table>
                     <colgroup>
-                      <col style="width: 220px;">
+                      <col style="width: 150px;">
                       <col style="width: auto">                            
                     </colgroup>            
                     <tbody>              
                       <tr>
                         <th scope="row" class="text-left ver-top">카카오페이 결제안내</th>
-                        <td colspan="2" class="text-left pl-0">                  
+                        <td class="text-left pl-0">                  
                           <ul class="ps-list type2">
                             <li>카카오페이는 개인 신용카드를 카카오톡앱에 등록/인증하여 결제하는 방식으로 최초 1회 결제정보만 입력하여 간편하게 결제하실 수 있는 모바일 결제 서비스 입니다. </li>
                             <li>이용 가능한 카드 : BC카드, KB국민카드, 삼성카드, 롯데카드, 외환카드, 하나카드, 현대카드, 씨티카드, NH농협카드, 신한카드</li>
@@ -817,13 +820,13 @@
                 <div class="ps-table type3">
                   <table>
                     <colgroup>
-                      <col style="width: 220px;">
+                      <col style="width: 150px;">
                       <col style="width: auto">                            
                     </colgroup>            
                     <tbody>              
                       <tr>
                         <th scope="row" class="text-left ver-top">페이코 간편결제안내</th>
-                        <td colspan="2" class="text-left pl-0">                  
+                        <td class="text-left pl-0">                  
                           <ul class="ps-list type2">
                             <li>PAYCO는 온/오프라인 쇼핑은 물론 송금, 멤버십 적립까지 가능한 통합 서비스입니다.</li>
                             <li>휴대폰과 카드 명의자가 동일해야 결제 가능하며, 결제금액 제한은 없습니다.</li>
@@ -839,13 +842,13 @@
                 <div class="ps-table type3">
                   <table>
                     <colgroup>
-                      <col style="width: 220px;">
+                      <col style="width: 150px;">
                       <col style="width: auto">                            
                     </colgroup>            
                     <tbody>              
                       <tr>
                         <th scope="row" class="text-left ver-top">스마일페이 간편결제안내</th>
-                        <td colspan="2" class="text-left pl-0">                  
+                        <td class="text-left pl-0">                  
                           <ul class="ps-list type2">
                             <li>스마일페이는 G마켓/옥션/G9 ID로 별도 앱 설치 없이 신용카드를 등록하여 비밀번호로 결제할 수 있는 간편결제 서비스 입니다(지원카드: 모든 국내 신용/체크카드)</li>
                             <li>스마일페이는 신용카드, 은행계좌, 휴대폰 명의자와 SMS를 인증받은 휴대폰 명의자가 동일해야 합니다.</li>
