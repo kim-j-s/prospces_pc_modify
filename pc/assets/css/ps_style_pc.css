@@ -598,6 +598,9 @@ video {
 .pl-0{
 	padding-left: 0px !important;
 }
+.pl-8{
+	padding-left: 8px !important;
+}
 .pl-35{
 	padding-left: 35px !important;
 }
@@ -664,6 +667,13 @@ video {
 }
 .w_800 {
 	width: 800px !important;
+}
+.max_w_none {
+  max-width: none !important;
+}
+
+.h_240 {
+  height: 240px !important;
 }
 .flex-auto {
 	-webkit-box-flex: 1 !important;
@@ -2383,6 +2393,10 @@ button.swiper-pagination-bullet {
   padding: 7px 16px;
 }
 
+.selectric-wrapper.selectric-w_76 {
+  width: auto;
+  min-width: 76px;
+}
 .selectric-wrapper.selectric-w_180 {
   width: auto;
   min-width: 180px;
@@ -10340,7 +10354,7 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	vertical-align:middle;
 	margin-left:30px;
 }
-img + .pro-order--info{
+.product-img + .pro-order--info{
   margin-left: 0;
 }
 .pro-order--info > .pro-name{
