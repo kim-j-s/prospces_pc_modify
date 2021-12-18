@@ -522,6 +522,9 @@ video {
 .mt-20 {
 	margin-top: 20px !important;
 }
+.mt-28 {
+	margin-top: 28px !important;
+}
 .mt-30 {
 	margin-top: 30px !important;
 }
@@ -563,6 +566,9 @@ video {
 }
 .mb-0 {
 	margin-bottom: 0px !important;
+}
+.mb-10 {
+	margin-bottom: 10px !important;
 }
 .mb-20 {
 	margin-bottom: 20px !important;
@@ -2206,6 +2212,15 @@ button.swiper-pagination-bullet {
   background: url(../images/icon_search_gray.svg) no-repeat center center/ 100% 100%;
 }
 
+.ps-text-link {
+  display: inline-block;
+  padding-right: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222 !important;
+  background: url(../images/icon_text-link.svg) no-repeat right center;
+}
+
 /* button */
 /* select */
 .selectric-wrapper {
@@ -3405,7 +3420,7 @@ button.swiper-pagination-bullet {
   width: 294px !important;
 }
 .ps-input .datepicker {
-  padding-right: 35px;
+  padding-right: 45px;
   background: url(../images/icon_calendar.svg) no-repeat right 16px center;
 }
 
@@ -4419,9 +4434,12 @@ main.index + .ps-footer {
 	display:block;
 }
 .ps-cont-head > .bottom-info > span{
+	/* font-weight:300; */
 	font-size:16px;
 	color:#222;
-	font-weight:300;
+}
+.ps-cont-head > .bottom-info > span + span{
+  margin-left: 40px;
 }
 .ps-cont-head > .bottom-info > span > strong{
 	margin-left:8px;
@@ -4468,6 +4486,10 @@ main.index + .ps-footer {
 }
 
 .ps-breadcrumb + .ps-subtitle{
+  margin-top: -20px;
+}
+
+.ps-breadcrumb + .ps-title-type4{
   margin-top: -20px;
 }
 
@@ -10318,6 +10340,9 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	vertical-align:middle;
 	margin-left:30px;
 }
+img + .pro-order--info{
+  margin-left: 0;
+}
 .pro-order--info > .pro-name{
 	font-weight:500;	
 	font-size:18px;
@@ -10806,11 +10831,12 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 }
 .my-page--box{
 	display:block;
-	border:1px solid #222;
+	border:2px solid #222;
 }
 .my-page--box > .my-page--profile{
-	padding:35px 60px;
+  position: relative;
 	display:block;
+	padding:35px 60px;
 }
 .my-page--box > .my-page--profile > .profile-icon{
 	display:inline-block;
@@ -10820,9 +10846,19 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	display:inline-block;
 	vertical-align:top;
 	font-size:22px;
-	font-weight:bold;
 	line-height:30px;
 	margin-left:20px;
+}
+.my-page--box > .my-page--profile > .profile-info > a {
+  position: absolute;
+  top: 50%;
+  right: 46px;
+  padding-right: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  transform: translateY(-50%);
+  background: url(../images/icon_arrow_R_14.svg) no-repeat right center;
 }
 .my-page--box > ul{
 	display:block;
@@ -10841,16 +10877,19 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	border-right:1px solid transparent;
 }
 .my-page--box > ul > li > a > .tit{
-	font-size:16px;
-	display:block;
-	color:#222;
+  display:block;
+  padding-bottom: 4px;
 	font-weight:400;
+  line-height: 24px;
+	font-size:16px;
+	color:#222;
 }
 .my-page--box > ul > li > a > .num{
-	font-size:24px;
 	display:block;
-	color:#222;
 	font-weight:bold;
+	font-size:24px;
+	color:#222;
+  line-height: 33px;
 	text-decoration:underline;
 }
 .my-page--box + .ps-cont-head{
