@@ -540,6 +540,9 @@ video {
 .mt-60 {
 	margin-top: 60px !important;
 }
+.mt-80 {
+	margin-top: 80px !important;
+}
 .mt-100 {
 	margin-top: 100px !important;
 }
@@ -2070,6 +2073,10 @@ button.swiper-pagination-bullet {
   margin-left: 20px;
 }
 
+.modal-container .ps-btn-wrap .ps-btn + .ps-btn {
+  margin-left: 8px;
+}
+
 .ps-btn-wrap.list-more {
   margin-top: 80px;
 }
@@ -2258,8 +2265,8 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: calc(100% - 1px);
   left: 0;
-  /* width: 100% !important; */
-  width: auto !important;
+  width: 100% !important;
+  /* width: auto !important; */
   background: #fff;
   border: 1px solid #ccc;
   z-index: -1;
@@ -2422,6 +2429,7 @@ button.swiper-pagination-bullet {
 .selectric-wrapper.selectric-mini .selectric-items {
   top: 56px;
   min-width: 180px;
+  width: auto !important;
 }
 
 .selectric-wrapper.selectric-mini.selectric-right .selectric-items {
@@ -3340,9 +3348,14 @@ button.swiper-pagination-bullet {
   font-size: 18px;
   line-height: 24px;
 }
-.ps-chkbox > label > input[type="checkbox"] + .text::before {
+.ps-chkbox.big > label > input[type="checkbox"] + .text::before {
   width: 24px;
   height: 24px;
+}
+
+.ps-chkbox.big > label > input[type="checkbox"]:not(.etc-color):checked + .text::before {
+  background-image: url(../images/icon_chkbox_big.svg);
+  background-size: 14px auto;
 }
 
 /* checkbox */
@@ -6491,7 +6504,7 @@ main.index + .ps-footer {
 }
 
 .ps-items-swiper.lookbook .cont .swiper--button-prev {
-  left: 0;
+  left: 30px;
   background-image: url(../../assets/images/icon_arrow_L_white_blur.svg);
 }
 
@@ -6934,7 +6947,7 @@ main.index + .ps-footer {
   margin-top: 70px !important;
 }
 .ps-prd-list--wrap.ps-event-list > .ps-col:nth-child(-n + 3){
-  margin-top: 0 !important;
+  margin-top: 20px !important;
 }
 
 .ps-best-items {
