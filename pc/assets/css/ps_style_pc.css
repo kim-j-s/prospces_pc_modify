@@ -665,6 +665,9 @@ video {
 .w_260 {
 	width: 260px !important;
 }
+.w_395 {
+	width: 395px !important;
+}
 .w_580 {
 	width: 580px !important;
 }
@@ -2034,9 +2037,6 @@ button.swiper-pagination-bullet {
 .btn-option--list03 > li + li {
   margin-left: -1px;
 }
-
-
-
 .btn-option input[type="radio"]{
 	display:none;
 }
@@ -10066,7 +10066,7 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	    -ms-flex-align: center !important;
 	        align-items: center !important;
 	background:#faf4e4;
-	padding:32px 40px;
+	padding: 20px 40px;
 }
 .orange-card-area > img {
 	display:inline-block;
@@ -11070,7 +11070,8 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	margin-top:80px;
 }
 .question-th{
-	padding-left:30px !important;
+  padding: 20px 0 20px 30px !important;
+  font-weight: 700 !important;
 	font-size:22px !important;
 }
 .question-td{
@@ -11491,6 +11492,7 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 }
 
 .flex-cont-wrap.phone {
+  display: inline-flex;
   width: 395px;
 }
 .flex-cont-wrap.phone > * + * {

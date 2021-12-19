@@ -265,11 +265,10 @@
               <span>회원정보</span>
               <span>회원정보수정</span>
             </div>
-            <h4 class="ps-title-type4 font-bold">회원정보수정</h4>
-
-            
+            <h4 class="ps-title-type4 font-bold">회원정보수정</h4>            
             <div class="ps-cont-head">
-              <small class="small-desc self-end essential">필수 입력 정보</small>
+              <div class="front">&nbsp;</div>
+              <small class="small-desc self-end essential font-dark">필수 입력 정보</small>
             </div>
             <div class="ps-table type2">
               <table>
@@ -305,7 +304,7 @@
                             </p>
                           </div>
                         </div>
-                        <p class="td-notice font-dgray">이메일 수신동의, 문자 SMS 수신동의를 모두 한뒤 가입한 경우, 신규회원 금액 쿠폰 5종 패키지(쇼핑백 최대 3만원 할인)를 드립니다.</p>
+                        <p class="td-notice font-dark">이메일 수신동의, 문자 SMS 수신동의를 모두 한뒤 가입한 경우, 신규회원 금액 쿠폰 5종 패키지(쇼핑백 최대 3만원 할인)를 드립니다.</p>
                     </td>
                   </tr>
                   <tr>
@@ -316,19 +315,37 @@
                       </div>
                     </td>               
                   </tr>
+
                   <tr class="noB-line">
                     <th scope="row" class="essential top">신규 비밀번호</th>
-                    <td colspan="3" class="pb-0">
-                      <div class="ps-input w_260">
-                        <input type="password" class="inp" placeholder="영문, 숫자 포함 8자 이상">
+                    <td class="po-rela pb-10">
+                      <div class="flex items-center">
+                        <div class="ps-input w_260">
+                          <input type="password" class="inp" placeholder="영문, 숫자 포함 8자 이상">
+                        </div>
+                        <div class="tb-notice font-red ml-10">
+                          <p class="case-1" style="display:none;">영문,숫자 조합으로 8자 이상</p>
+                          <p class="case-2">영문+숫자, 혹은 영문+특수문자 등 비밀번호를 조합하여 입력해 주세요.</p>
+                        </div>
                       </div>
-                    </td>               
+                      <div class="tb-notice font-red mt-5">
+                        <p>보안등급 : <span>높음</span></p>
+                      </div>                  
+                    </td>
                   </tr>
                   <tr>
-                    <th scope="row" class="essential top">신규 비밀번호 확인</th>
-                    <td colspan="3" class="po-rela">
-                      <div class="ps-input w_260">
-                        <input type="password" class="inp" placeholder="비밀번호 확인">
+                    <th scope="row" class="essential top pt-0">신규 비밀번호 확인</th>
+                    <td class="po-rela pt-0">
+                      <div class="flex items-center">
+                        <div class="ps-input w_260">
+                          <input type="password" class="inp" placeholder="비밀번호 확인">
+                        </div>
+                        <div class="tb-notice font-red ml-10">
+                          <p class="case-1">비밀번호 확인을 위해 다시 한 번 입력해 주세요.</p>
+                          <p class="case-2" style="display: none;">보안등급: <span>낮음</span></p>
+                          <p class="case-3" style="display: none;">보안등급: <span>보통</span></p>
+                          <p class="case-4" style="display: none;">보안등급: <span>높음</span></p>
+                        </div>
                       </div>
                       <div class="tb-notice font-red mt-5">
                         <p>비밀번호가 일치하지 않습니다.</p>
@@ -337,7 +354,7 @@
                   </tr>
                   <tr>
                     <th scope="row" class="essential">이름</th>
-                    <td colspan="3">
+                    <td>
                       <div class="ps-input w_260">
                         <input type="text" class="inp">
                       </div>                  
@@ -345,7 +362,7 @@
                   </tr>
                   <tr>
                     <th scope="row" class="essential top">휴대폰 번호</th>
-                    <td colspan="3">                    
+                    <td>
                       <div class="flex-cont-wrap phone">
                         <select name="" id="" class="ps-select h-small">
                           <option value="">010</option>
@@ -359,7 +376,7 @@
                           <input type="text" class="inp">
                         </div>
                       </div>
-                      <div class="table-radio-check">              
+                      <div class="table-radio-check">
                           <div class="radio-box">
                             <div class="ps-chkbox">
                               <label>
@@ -390,7 +407,7 @@
                   </tr>
                   <tr>
                     <th scope="row" class="essential">생년월일</th>
-                    <td colspan="3">
+                    <td>
                       <div class="flex-cont-wrap birth">
                         <select name="" id="" class="ps-select h-small">
                           <option value="">년도</option>
@@ -412,46 +429,46 @@
                   </tr>
                   <tr>
                     <th scope="row">성별</th>
-                    <td colspan="3">                  
-                        <div class="radio-box">
-                          <div class="ps-chkbox">
-                            <label>
-                              <input type="radio" name="gender-ck" id="" checked="checked">
-                              <span class="text">남자</span>
-                            </label>
-                          </div>
-                          <div class="ps-chkbox">
-                            <label>
-                              <input type="radio" name="gender-ck" id="">
-                              <span class="text">여자</span>
-                            </label>
-                          </div>
-                        </div>                                        
+                    <td>
+                      <div class="radio-box etc">
+                        <div class="ps-chkbox etc">
+                          <label>
+                            <input type="radio" name="gender-ck" id="" checked="checked">
+                            <span class="text">남자</span>
+                          </label>
+                        </div>
+                        <div class="ps-chkbox etc">
+                          <label>
+                            <input type="radio" name="gender-ck" id="">
+                            <span class="text">여자</span>
+                          </label>
+                        </div>
+                      </div>                                        
                     </td>               
                   </tr>
                   <tr>
                     <th scope="row" class="essential top vt">휴면방지기간</th>
-                    <td colspan="3">                  
-                        <div class="radio-box">
-                          <div class="ps-chkbox">
+                    <td>
+                        <div class="radio-box etc">
+                          <div class="ps-chkbox etc">
                             <label>
                               <input type="radio" name="shield-ck" id="">
                               <span class="text">1년</span>
                             </label>
                           </div>
-                          <div class="ps-chkbox">
+                          <div class="ps-chkbox etc">
                             <label>
                               <input type="radio" name="shield-ck" id="">
                               <span class="text">3년</span>
                             </label>
                           </div>
-                          <div class="ps-chkbox">
+                          <div class="ps-chkbox etc">
                             <label>
                               <input type="radio" name="shield-ck" id="">
                               <span class="text">5년</span>
                             </label>
                           </div>
-                          <div class="ps-chkbox">
+                          <div class="ps-chkbox etc">
                             <label>
                               <input type="radio" name="shield-ck" id="" checked="checked">
                               <span class="text">탈퇴시까지</span>
@@ -460,7 +477,6 @@
                         </div>
                         <div class="sign_up-box--tb-noti">
                         <p class="tb-notice font-red">기간을 변경해주시면, 장기 미접속시에도 휴면계정으로 전환되는 것을 방지할 수 있습니다.</p>
-                        <p class="tb-notice">휴대폰 인증을 통해 비밀번호를 찾으신 경우에는 인증 완료 후 재설정 해 주세요.</p>
                         </div>
                     </td>               
                   </tr>
@@ -473,12 +489,6 @@
                             <input type="text" class="inp text-center" readonly>
                           </div>
                           <a href="javascript:void(0)" class="ps-btn type4 ver-top">우편번호 찾기</a>
-                          <div class="ps-chkbox ml-20">
-                            <label>
-                              <input type="checkbox" name="" id="">
-                              <span class="text">이 주소를 기본 배송지로 등록 합니다.</span>
-                            </label>
-                          </div>
                         </div>
                         <div class="bottom flex">
                           <div class="ps-input">
@@ -520,7 +530,7 @@
                  <span class="time-num">2021.09.30 09:00:00</span>
                   연결완료되었습니다. (이름 : 김프로)
                 </span>
-                <a href="javascript:void(0)" class="ps-btn type4 small-gray">연결해제</a>
+                <a href="javascript:void(0)" class="ps-btn type4 small-white">연결해제</a>
               </li>
               <li>
                 <img src="../../assets/images/icon_face.png" alt="페이스북 아이콘">
@@ -529,7 +539,7 @@
                  <span class="time-num">2021.09.30 09:00:00</span>
                   연결완료되었습니다. (이름 : 김프로)
                 </span>
-                <a href="javascript:void(0)" class="ps-btn type4 small-gray">연결해제</a>
+                <a href="javascript:void(0)" class="ps-btn type4 small-white">연결해제</a>
               </li>
             </ul>
 
