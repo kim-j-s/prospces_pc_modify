@@ -519,6 +519,9 @@ video {
 .mt-8 {
   margin-top: 8px !important;
 }
+.mt-16 {
+	margin-top: 16px !important;
+}
 .mt-20 {
 	margin-top: 20px !important;
 }
@@ -1825,6 +1828,9 @@ button.swiper-pagination-bullet {
   background:#222;
   color:#fff;
 }
+.ps-btn.type4.c-black.w_100 {
+  min-width: 100px !important;
+}
 .ps-btn.type4.small-gray{
 	max-width: 80px;
   min-width: 76px;
@@ -1923,7 +1929,7 @@ button.swiper-pagination-bullet {
   display: inline-block;  
   width: 190px;
   padding: 11px 10px;
-  font-weight: 500;
+  /* font-weight: 500; */
   font-size: 14px;
   line-height: 18px;
   color: #fff;
@@ -2396,6 +2402,10 @@ button.swiper-pagination-bullet {
 .selectric-wrapper.selectric-w_76 {
   width: auto;
   min-width: 76px;
+}
+.selectric-wrapper.selectric-w_100 {
+  width: auto;
+  min-width: 100px;
 }
 .selectric-wrapper.selectric-w_180 {
   width: auto;
@@ -10298,6 +10308,12 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	margin-top:12px;
 	font-size:0;
 }
+.modal-content > .modal-hidden--box > .hidden-cont> div {
+  line-height: 18px;
+}
+.modal-content > .modal-hidden--box > .hidden-cont> div + div {
+  margin-top: 4px;
+}
 .modal-content > .modal-hidden--box > .hidden-cont> div >.tit{
 	font-size:14px ;
 	color:#999;
@@ -11015,7 +11031,7 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 
 .my-page--point{
 	display:block;
-	border:1px solid #222;
+	border:2px solid #222;
 	margin-top:40px;
 }
 
@@ -11036,16 +11052,19 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	border-right:1px solid transparent;
 }
 .my-page--point > ul > li > a > .tit{
-	font-size:16px;
 	display:block;
-	color:#222;
+  padding-bottom: 4px;
 	font-weight:400;
+	font-size:16px;
+  line-height: 24px;
+	color:#222;
 }
 .my-page--point > ul > li > a > .num{
-	font-size:24px;
 	display:block;
-	color:#222;
 	font-weight:bold;
+	font-size:24px;
+  line-height: 33px;
+	color:#222;
 }
 .my-page--point + .ps-cont-head{
 	margin-top:80px;
@@ -11180,10 +11199,10 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 	font-size:22px;
 }
 .pro-order--info > .pro-noti{
+	/* font-weight:300; */
 	font-size:16px;
 	color:#999;
 	margin-top:18px;
-	font-weight:300;
 }
 .review-info{
 	font-size: 14px;
