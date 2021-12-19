@@ -3397,10 +3397,6 @@ button.swiper-pagination-bullet {
   margin-left: 0;
 }
 
-.ps-chkbox.big {
-
-}
-
 .ps-chkbox.big > label > input[type="checkbox"] + .text {
   padding-left: 32px;
   font-size: 18px;
@@ -3632,6 +3628,18 @@ button.swiper-pagination-bullet {
 .ps-list.type3 > li + li {
   margin-top: 10px;
 }
+
+.ps-list.type3.c-gary > li {
+  color: #999;
+}
+
+.ps-list.type3 > li.c-ty1 {
+  color: #d13b40 !important;
+}
+.ps-list.type3 > li.c-ty1::before {
+  border-bottom: 4px solid #d13b40 !important;
+}
+
 
 .ps-list.type4 > li {
   display: -webkit-box;
@@ -4293,13 +4301,6 @@ main.index + .ps-footer {
 .ps-sub-content--top.smartfit {
   background: #f8f8fa url(../images/smartfit/bg_smartfit_top.png) no-repeat center center;
 }
-
-/*
-.ps-sub-content--top.appdownload {
-  background: #d13b40 url(../images/app/app-down-bg.png) no-repeat center center;
-  background-size: cover;
-}
-*/
 
 .ps-sub-content--top.sponsorship {
   margin-bottom: 120px;
@@ -5480,12 +5481,103 @@ main.index + .ps-footer {
   margin-top: 100px;
 }
 
-.ps-i {
-  /* 배송안내 */
-  /* 배송안내 */
+
+.ps-inven-item {
+  padding: 20px 0;
+  font-size: 0;
+  border-bottom: 1px solid #eee;
+}
+.ps-inven-item > .thumb {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 1;
+}
+.ps-inven-item > .detail {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 40px;
+}
+.ps-inven-item > .detail .code {
+  padding-bottom: 4px;
+  font-size: 16px;
+  color: #999;
+  line-height: 20px;
+}
+.ps-inven-item > .detail .name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.ps-inven-size {
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+}
+.ps-inven-size > .ps-title-type3 {
+  padding-bottom: 8px;
+}
+
+.ps-address-search {
+  margin-top: 20px;
+}
+.ps-address-search > .top .selectric-wrapper.selectric-h-small {
+  width: 100%;
+}
+.ps-address-search > .cont {
+  padding-top: 20px;
+}
+
+
+
+.ps-box-radio {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 8px 8px 0 0;
+}
+.ps-box-radio > label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.ps-box-radio > label > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+.ps-box-radio > label > input[type="radio"] + .text {
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #999;
+  line-height: 44px;
+  text-align: center;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+.ps-box-radio > label > input[type="radio"]:checked + .text {
+  color: #222;
+  border: 1px solid #222;
+}
+.ps-box-radio > label > input[type="radio"]:disabled + .text {
+  border: 1px solid #f5f5f5;
+  background: #f5f5f5;
+}
+
+.ps-size-select {
+  width: calc(100% + 12px);
+  font-size: 0;
 }
 
 /* 상품 상세 정보 */
+
 /* 상품상세 */
 /* 슬라이드 */
 .ps-slide {
@@ -10210,6 +10302,9 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
   overflow: auto;
   padding-top: 60px;
 }
+.modal.middle{
+	width:700px !important;
+}
 .modal.large{
 	width:852px !important;
 }
@@ -10237,9 +10332,16 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
 
 .modal-container {
   width: 100%;
-  padding: 55px 60px 55;
+  padding: 60px;
   background: #fff;
   overflow: auto;
+}
+
+.modal.middle .modal-container > .modal-title {
+  min-width: 580px;
+}
+.modal.middle .modal-container > .modal-content {
+  min-width: 580px;
 }
 
 .bor-n{border:none !important;}
